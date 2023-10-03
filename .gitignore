@@ -1,3 +1,5 @@
 .env
 code/
 .coverage
+api/__pycache__/
+sigl_api/__pycache__/
