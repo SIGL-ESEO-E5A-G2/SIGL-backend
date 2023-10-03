@@ -7,21 +7,7 @@ export exitcode=0
 echo "Pylint Check"
 # disable is for black and pylint indentation conflict
 # pylint-exit exits 0 code in case of any trouble but fatal in pylint, which can be useful
-
-
-mkdir /var/workspace/code/target
-touch /var/workspace/code/target/pylint.log
-find -name "*.py" -not -path "./tests/*" | xargs pylint --output-format=text | tee /var/workspace/code/target/pylint.log
-PYLINT_SCORE=$(sed -n 's/^Your code has been rated at \([-0-9.]*\)\/.*/\1/p' /var/workspace/code/target/pylint.log)
-PYLINT_TARGET=6.00
-echo "Pylint score is $PYLINT_SCORE"
-
-if (( $(echo "$PYLINT_SCORE < $PYLINT_TARGET" |bc -l) )); then
-  echo "Numerous Pylint warnings"
-  # if needed add:    export exitcode=1
-else
-  echo "Pylint successful"
-fi
+find -name "*.py" -not -path "./tests/*" | xargs pylint --output-format=text
 
 
 #For now there are no tests set in qbuild, when done below code could be uncommented in order to get a documentation badge.
