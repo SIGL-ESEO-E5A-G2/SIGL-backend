@@ -1,2 +1,2 @@
 test: ## Launch CI test
-	./run.sh
+	./test-ci.sh
