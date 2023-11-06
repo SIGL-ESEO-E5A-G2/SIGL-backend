@@ -1,5 +1,2 @@
-qbuild: ## Launch Quality build
-	docker-compose -f app.qbuild.yml build
-	docker-compose -f app.qbuild.yml down
-	docker-compose -f app.qbuild.yml up --remove-orphans
-	docker-compose -f app.qbuild.yml down
+test: ## Launch CI test
+	./test-ci.sh
