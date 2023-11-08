@@ -7,10 +7,15 @@ WORKDIR /app/sigl_api
 
 COPY requirements.txt /app/sigl_api
 
-# Build psycopg2-binary from source -- add required required dependencies
-RUN apk add --virtual .build-deps --no-cache gcc python3-dev musl-dev && \
-        pip install --no-cache-dir -r requirements.txt && \
-        apk --purge del .build-deps
+RUN apk update
+RUN apk add git
+RUN git init
+RUN apk add --virtual .build-deps --no-cache gcc python3-dev musl-dev mariadb-connector-c-dev
+RUN wget https://bootstrap.pypa.io/get-pip.py
+RUN  python3 get-pip.py
+RUN rm get-pip.py
+RUN pip install -r requirements.txt
+
 
 COPY . /app/sigl_api/
 

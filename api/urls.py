@@ -6,8 +6,8 @@ from api.views import PersonViewSet, SpeciesViewSet
 
 router = routers.DefaultRouter()
 # =================== EXEMPLE =======================
-router.register(r'people', PersonViewSet)
-router.register(r'species', SpeciesViewSet)
+# router.register(r'people', PersonViewSet)
+
 # =================== EXEMPLE =======================
 
 urlpatterns = [

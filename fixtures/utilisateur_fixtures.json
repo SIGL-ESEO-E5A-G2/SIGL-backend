@@ -1,0 +1,125 @@
+[
+    {
+        "model": "api.utilisateur",
+        "pk": 1,
+        "fields": {
+            "nom": "ALLORY",
+            "prenom": "Corantin",
+            "email": "corantin.allory@reseau.eseo.fr",
+            "motDePasse": "MotDePasseAleatoire1",
+            "roles":[1]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 2,
+        "fields": {
+          "nom": "AINS",
+          "prenom": "Nathan",
+          "email": "nathan.ains@reseau.eseo.fr",
+          "motDePasse": "MotDePasse1",
+          "roles":[1]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 3,
+        "fields": {
+          "nom": "ABAZIOU",
+          "prenom": "Yann",
+          "email": "Yann.ABAZIOU@reseau.eseo.fr",
+          "motDePasse": "MotDePasse1",
+          "roles":[1]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 4,
+        "fields": {
+          "nom": "PLANTIER",
+          "prenom": "Guy",
+          "email": "guy.plantier@eseo.fr",
+          "motDePasse": "MotDePasse1",
+          "roles":[2]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 5,
+        "fields": {
+          "nom": "COLIN",
+          "prenom": "Vincent",
+          "email": "vincent.colin@eseo.fr",
+          "motDePasse": "MotDePasse1",
+          "roles":[2]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 6,
+        "fields": {
+          "nom": "TISSIER",
+          "prenom": "Jérôme",
+          "email": "jerome.tissier@eseo.fr",
+          "motDePasse": "MotDePasse1",
+          "roles":[2]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 7,
+        "fields": {
+          "nom": "GIRARD",
+          "prenom": "Arnaud",
+          "email": "agirard@wabtec.com",
+          "motDePasse": "MotDePasse1",
+          "roles":[5]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 8,
+        "fields": {
+          "nom": "LEGRAND",
+          "prenom": "Marc",
+          "email": "marc.legrand@lorillard.fr",
+          "motDePasse": "MotDePasse1",
+          "roles":[5]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 9,
+        "fields": {
+          "nom": "SADAN KOWADLO",
+          "prenom": "Robin",
+          "email": "robin.sadan-kowadlo@thalesgroup.com",
+          "motDePasse": "MotDePasse1",
+          "roles":[5]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 10,
+        "fields": {
+          "nom": "CHOLLET",
+          "prenom": "Coraline",
+          "email": "coraline.chollet@eseo.fr",
+          "motDePasse": "MotDePasse1",
+          "roles":[4, 3]
+        }
+    },
+    {
+        "model": "api.utilisateur",
+        "pk": 11,
+        "fields": {
+          "nom": "ADMIN",
+          "prenom": "admin",
+          "email": "admin@eseo.fr",
+          "motDePasse": "admin",
+          "roles":[3]
+        }
+    }
+    
+]
+    

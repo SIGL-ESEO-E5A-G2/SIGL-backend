@@ -21,6 +21,6 @@ from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # =================== EXEMPLE =======================
-    path('star-wars/', include('api.urls')),
+    # path('star-wars/', include('api.urls')),
     # =================== EXEMPLE =======================
 ]
