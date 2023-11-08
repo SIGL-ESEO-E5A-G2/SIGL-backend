@@ -1,0 +1,21 @@
+[
+    {
+        "model": "api.TuteurPedagogique",
+        "fields": {
+          "idUtilisateur": 4
+        }
+    },
+    {
+        "model": "api.TuteurPedagogique",
+        "fields": {
+            "idUtilisateur": 5
+        }
+    },
+    {
+        "model": "api.TuteurPedagogique",
+        "fields": {
+          "idUtilisateur": 6
+        }
+    }
+]
+    

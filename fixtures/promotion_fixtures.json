@@ -1,0 +1,21 @@
+[
+    {
+        "model": "api.Promotion",
+        "fields": {
+            "libelle": "Quéré",
+            "semestre": "S5"
+        }
+    },{
+        "model": "api.Promotion",
+        "fields": {
+            "libelle": "Poincaré",
+            "semestre": "S7"
+        }
+    },{
+        "model": "api.Promotion",
+        "fields": {
+            "libelle": "Onsager",
+            "semestre": "S9"
+        }
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "model": "api.MaitreAlternance",
+        "fields": {
+          "idUtilisateur": 7
+        }
+    },
+    {
+        "model": "api.MaitreAlternance",
+        "fields": {
+          "idUtilisateur": 8
+        }
+    },
+    {
+        "model": "api.MaitreAlternance",
+        "fields": {
+          "idUtilisateur": 9
+        }
+    }
+]

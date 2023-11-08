@@ -1,0 +1,8 @@
+[
+    {
+        "model": "api.CoordinatriceAlternance",
+        "fields": {
+          "idUtilisateur": 10
+        }
+    }
+]
