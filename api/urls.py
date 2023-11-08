@@ -8,6 +8,7 @@ router = routers.SimpleRouter()
 
 # Puis lui déclarons une url basée sur le mot clé ‘category’ et notre view
 # afin que l’url générée soit celle que nous souhaitons ‘/api/category/’
+
 router.register('utilisateur', UtilisateurViewSet, basename='utilisateurs')
 router.register('apprenti', ApprentiViewSet, basename='apprenti')
 router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='utilisateurs')
