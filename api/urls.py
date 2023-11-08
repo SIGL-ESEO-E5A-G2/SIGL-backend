@@ -2,13 +2,13 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-from api.views import PersonViewSet, SpeciesViewSet
+from api.views import UtilisateurViewSet
 
-router = routers.DefaultRouter()
-# =================== EXEMPLE =======================
-# router.register(r'people', PersonViewSet)
+router = routers.SimpleRouter()
 
-# =================== EXEMPLE =======================
+# Puis lui déclarons une url basée sur le mot clé ‘category’ et notre view
+# afin que l’url générée soit celle que nous souhaitons ‘/api/category/’
+router.register('utilisateurs', UtilisateurViewSet, basename='utilisateurs')
 
 urlpatterns = [
    path('', include(router.urls)),

@@ -1,0 +1,14 @@
+[
+      {
+        "model": "api.Administrateur",
+        "fields": {
+          "idUtilisateur": 10
+        }
+    },
+    {
+        "model": "api.Administrateur",
+        "fields": {
+          "idUtilisateur": 11
+        }
+    }
+]

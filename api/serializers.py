@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 # =================== EXEMPLE =======================
-from api.models import Person, Species
+from api.models import Utilisateur
 
 # class PersonSerializer(serializers.ModelSerializer):
 #    class Meta:
@@ -9,3 +9,8 @@ from api.models import Person, Species
 #        fields = ('name', 'birth_year', 'eye_color', 'species')
 
 # =================== EXEMPLE =======================
+
+class UtilisateurSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Utilisateur
+        fields = '__all__'
