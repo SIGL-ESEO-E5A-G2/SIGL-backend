@@ -2,9 +2,7 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-
 from api.views import UtilisateurViewSet, ApprentiViewSet, TuteurPedagogiqueViewSet, MaitreAlternanceViewSet, CoordinatriceAlternanceViewSet
-
 
 router = routers.SimpleRouter()
 

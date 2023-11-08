@@ -39,3 +39,51 @@ Le premier mot est un verbe qui décrit globalement le travail qui a été fait,
 ### Créer une pull request
 
 Vous ne pourrez pas push directement sur la branche develop du projet car nous souhaitons quelle reste valide. Vous devrez créer une pull request que vous ferez valider par une personne du projet.
+
+---
+# Travailler avec le Backend
+## Lancer le conteneur en local
+Pour lancer la première fois conteneur, vous devez :
+1. Allumer Docker (oui oui)
+2. Se mettre à la racine du projet et lancer `docker-compose up --build`
+
+Puis, pour seulement le lancer (sans build), vous pouvez executer `docker-compose up`
+
+## Interagir avec le schéma de BD
+Pour intéragir avec la BD, on utilise l'ORM de Django.
+### Créer une table
+Pour créer une table :
+1. Créer un modèle dans `api/models.py`.
+2. Aller dans le terminal du conteneur sigl-backend (soit en ligne de commande soit par l'interface de Docker).
+3. Se mettre à la racine du projet et executer `python manage.py makemigrations api`.
+4. Se mettre à la racine du projet et executer `python manage.py migrate`.
+
+### Modifier une table
+Pour Modifier une table :
+1. Modifier la table voulue (ajoute d'une colonne par exemple) dans `api/models.py`.
+2. Aller dans le terminal du conteneur sigl-backend (soit en ligne de commande soit par l'interface de Docker).
+3. Se mettre à la racine du projet et executer `python manage.py makemigrations api`.
+4. Se mettre à la racine du projet et executer `python manage.py migrate`.
+
+### Remplir une table avec des données de test
+Pour créer des données de test (fixtures) :
+1. Créer un fichier {model}_fixtures.json
+2. Remplir les données en fonctions des champs du modèle, exemple avec Utilisateur :
+```json
+    [
+    {
+        "model": "api.utilisateur",
+        "pk": 1,
+        "fields": {
+            "nom": "ALLORY",
+            "prenom": "Corantin",
+            "email": "corantin.allory@reseau.eseo.fr",
+            "motDePasse": "MotDePasseAleatoire1",
+            "roles":[1]
+        }
+    },
+    ...
+    ]
+```
+3. Aller dans le terminal du conteneur sigl-backend (soit en ligne de commande soit par l'interface de Docker).
+4. Se mettre à la racine du projet et executer `python ./manage.py loaddata {model}_fixtures.json`.
