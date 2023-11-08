@@ -4,6 +4,7 @@ from rest_framework.viewsets import ModelViewSet
 from api.serializers import UtilisateurSerializer, TuteurPedagogiqueSerializer, MaitreAlternanceSerializer, CoordinatriceAlternanceSerializer, ApprentiSerializer
 from api.models import Utilisateur, TuteurPedagogique, MaitreAlternance, CoordinatriceAlternance, Apprenti
 
+
 # =================== EXEMPLE =======================
 # class PersonViewSet(viewsets.ModelViewSet):
 #    queryset = Person.objects.all()
