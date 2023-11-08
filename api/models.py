@@ -49,7 +49,6 @@ class CoordinatriceAlternance(models.Model):
 class MaitreAlternance(models.Model):
    id = models.AutoField(primary_key=True)
    idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
-   entreprise = models.CharField(max_length=255)
 
 class Promotion(models.Model):
    id = models.AutoField(primary_key=True)
