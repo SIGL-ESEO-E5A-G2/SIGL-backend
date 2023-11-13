@@ -1,7 +1,6 @@
 from rest_framework import serializers
-
-
-from api.models import Utilisateur, TuteurPedagogique, CoordinatriceAlternance, MaitreAlternance, Apprenti
+from api.models import Utilisateur, TuteurPedagogique, CoordinatriceAlternance, MaitreAlternance, Apprenti, Role
+from django.contrib.auth import authenticate
 
 # =================== EXEMPLE =======================
 # class PersonSerializer(serializers.ModelSerializer):
@@ -10,10 +9,38 @@ from api.models import Utilisateur, TuteurPedagogique, CoordinatriceAlternance, 
 #        fields = ('name', 'birth_year', 'eye_color', 'species')
 # =================== EXEMPLE =======================
 
+class RoleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Role
+        fields = '__all__'
+
+#--- Utilisateur ---
+
 class UtilisateurSerializer(serializers.ModelSerializer):
+    roles = RoleSerializer(many=True)
+
     class Meta:
         model = Utilisateur
         fields = '__all__'
+
+class AuthentificationSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField()
+    def validate(self, data):
+        email = data.get('email')
+        password = data.get('password')
+        if email and password:
+            utilisateur =Utilisateur.objects.filter(email=email, password=password).first()
+            if utilisateur:
+                data['utilisateur'] = utilisateur
+            else:
+                raise serializers.ValidationError("L'adresse e-mail ou le mot de passe est incorrect.")
+        else:
+            raise serializers.ValidationError("L'adresse e-mail et le mot de passe sont requis.")
+
+        return data
+
+#--- TuteurPedagogique ---
 
 class TuteurPedagogiqueSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
@@ -21,17 +48,23 @@ class TuteurPedagogiqueSerializer(serializers.ModelSerializer):
         model = TuteurPedagogique
         fields = '__all__'
 
+#--- MaitreAlternance ---
+
 class MaitreAlternanceSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = MaitreAlternance
         fields = '__all__'
 
+#--- CoordinatriceAlternance ---
+
 class CoordinatriceAlternanceSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = CoordinatriceAlternance
         fields = '__all__'
+
+#--- Apprenti ---
 
 class ApprentiDetailSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
@@ -45,3 +78,4 @@ class ApprentiSerializer(serializers.ModelSerializer):
     class Meta:
         model = Apprenti
         fields = '__all__'
+

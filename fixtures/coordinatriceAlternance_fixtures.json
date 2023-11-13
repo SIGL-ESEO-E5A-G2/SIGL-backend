@@ -2,7 +2,7 @@
     {
         "model": "api.CoordinatriceAlternance",
         "fields": {
-          "idUtilisateur": 10
+          "utilisateur_id": 10
         }
     }
 ]

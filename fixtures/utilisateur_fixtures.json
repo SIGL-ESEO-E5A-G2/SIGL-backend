@@ -6,7 +6,7 @@
             "nom": "ALLORY",
             "prenom": "Corantin",
             "email": "corantin.allory@reseau.eseo.fr",
-            "motDePasse": "MotDePasseAleatoire1",
+            "password": "MotDePasseAleatoire1",
             "roles":[1]
         }
     },
@@ -17,7 +17,7 @@
           "nom": "AINS",
           "prenom": "Nathan",
           "email": "nathan.ains@reseau.eseo.fr",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[1]
         }
     },
@@ -28,7 +28,7 @@
           "nom": "ABAZIOU",
           "prenom": "Yann",
           "email": "Yann.ABAZIOU@reseau.eseo.fr",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[1]
         }
     },
@@ -39,7 +39,7 @@
           "nom": "PLANTIER",
           "prenom": "Guy",
           "email": "guy.plantier@eseo.fr",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[2]
         }
     },
@@ -50,7 +50,7 @@
           "nom": "COLIN",
           "prenom": "Vincent",
           "email": "vincent.colin@eseo.fr",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[2]
         }
     },
@@ -61,7 +61,7 @@
           "nom": "TISSIER",
           "prenom": "Jérôme",
           "email": "jerome.tissier@eseo.fr",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[2]
         }
     },
@@ -72,7 +72,7 @@
           "nom": "GIRARD",
           "prenom": "Arnaud",
           "email": "agirard@wabtec.com",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[5]
         }
     },
@@ -83,7 +83,7 @@
           "nom": "LEGRAND",
           "prenom": "Marc",
           "email": "marc.legrand@lorillard.fr",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[5]
         }
     },
@@ -94,7 +94,7 @@
           "nom": "SADAN KOWADLO",
           "prenom": "Robin",
           "email": "robin.sadan-kowadlo@thalesgroup.com",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[5]
         }
     },
@@ -105,7 +105,7 @@
           "nom": "CHOLLET",
           "prenom": "Coraline",
           "email": "coraline.chollet@eseo.fr",
-          "motDePasse": "MotDePasse1",
+          "password": "MotDePasse1",
           "roles":[4, 3]
         }
     },
@@ -116,7 +116,7 @@
           "nom": "ADMIN",
           "prenom": "admin",
           "email": "admin@eseo.fr",
-          "motDePasse": "admin",
+          "password": "admin",
           "roles":[3]
         }
     }

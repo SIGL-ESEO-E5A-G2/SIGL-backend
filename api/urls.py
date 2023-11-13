@@ -2,7 +2,7 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-from api.views import UtilisateurViewSet, ApprentiDetailViewSet, ApprentiViewSet, TuteurPedagogiqueViewSet, MaitreAlternanceViewSet, CoordinatriceAlternanceViewSet
+from api.views import UtilisateurViewSet, ApprentiDetailViewSet, ApprentiViewSet, TuteurPedagogiqueViewSet, MaitreAlternanceViewSet, CoordinatriceAlternanceViewSet, AuthentificationUtilisateurView,DeconnexionUtilisateurView
 
 router = routers.SimpleRouter()
 
@@ -18,4 +18,6 @@ router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basen
 
 urlpatterns = [
    path('', include(router.urls)),
+   path('authentification/', AuthentificationUtilisateurView.as_view(), name='authentification'),
+   path('deconnexion/', DeconnexionUtilisateurView.as_view(), name='deconnexion'),
 ]

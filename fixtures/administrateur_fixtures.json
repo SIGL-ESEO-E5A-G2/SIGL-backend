@@ -2,13 +2,13 @@
       {
         "model": "api.Administrateur",
         "fields": {
-          "idUtilisateur": 10
+          "utilisateur_id": 10
         }
     },
     {
         "model": "api.Administrateur",
         "fields": {
-          "idUtilisateur": 11
+          "utilisateur_id": 11
         }
     }
 ]
