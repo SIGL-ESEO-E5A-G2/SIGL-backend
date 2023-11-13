@@ -1,7 +1,7 @@
 from rest_framework import viewsets
-from rest_framework.viewsets import ModelViewSet
+from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
-from api.serializers import UtilisateurSerializer, TuteurPedagogiqueSerializer, MaitreAlternanceSerializer, CoordinatriceAlternanceSerializer, ApprentiSerializer
+from api.serializers import UtilisateurSerializer, TuteurPedagogiqueSerializer, ApprentiDetailSerializer, MaitreAlternanceSerializer, CoordinatriceAlternanceSerializer, ApprentiSerializer
 from api.models import Utilisateur, TuteurPedagogique, MaitreAlternance, CoordinatriceAlternance, Apprenti
 
 # =================== EXEMPLE =======================
@@ -37,6 +37,12 @@ class CoordinatriceAlternanceViewSet(ModelViewSet):
 
 class ApprentiViewSet(ModelViewSet):
     serializer_class = ApprentiSerializer
+ 
+    def get_queryset(self):
+        return Apprenti.objects.all()
+
+class ApprentiDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = ApprentiDetailSerializer
  
     def get_queryset(self):
         return Apprenti.objects.all()

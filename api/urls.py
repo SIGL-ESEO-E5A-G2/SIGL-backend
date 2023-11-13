@@ -2,7 +2,7 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-from api.views import UtilisateurViewSet, ApprentiViewSet, TuteurPedagogiqueViewSet, MaitreAlternanceViewSet, CoordinatriceAlternanceViewSet
+from api.views import UtilisateurViewSet, ApprentiDetailViewSet, ApprentiViewSet, TuteurPedagogiqueViewSet, MaitreAlternanceViewSet, CoordinatriceAlternanceViewSet
 
 router = routers.SimpleRouter()
 
@@ -11,6 +11,7 @@ router = routers.SimpleRouter()
 
 router.register('utilisateur', UtilisateurViewSet, basename='utilisateurs')
 router.register('apprenti', ApprentiViewSet, basename='apprenti')
+router.register('apprentidetail', ApprentiDetailViewSet, basename='apprenti')
 router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='utilisateurs')
 router.register('maitrealternance', MaitreAlternanceViewSet, basename='utilisateurs')
 router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='utilisateurs')

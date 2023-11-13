@@ -36,19 +36,19 @@ class Utilisateur(models.Model):
 
 class Administrateur(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class TuteurPedagogique(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class CoordinatriceAlternance(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class MaitreAlternance(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class Promotion(models.Model):
    id = models.AutoField(primary_key=True)
@@ -57,8 +57,8 @@ class Promotion(models.Model):
 
 class Apprenti(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
-   idTuteurPedagogique = models.ForeignKey(TuteurPedagogique, on_delete=models.CASCADE)
-   idMaitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   tuteurPedagogique = models.ForeignKey(TuteurPedagogique, on_delete=models.CASCADE)
+   maitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
    optionMajeure = models.CharField(max_length=255)
    optionMineure = models.CharField(max_length=255)
