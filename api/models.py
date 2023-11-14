@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 # =================== EXEMPLE =======================
 # class Species(models.Model):
@@ -26,29 +27,51 @@ class Role(models.Model):
    id = models.AutoField(primary_key=True)
    libelle = models.CharField(max_length=25, choices= RoleEnum.choices, default=RoleEnum.Apprenti)
 
-class Utilisateur(models.Model):
-   id = models.AutoField(primary_key=True)
-   nom = models.CharField(max_length=255)
-   prenom = models.CharField(max_length=255)
-   email = models.CharField(max_length=255)
-   motDePasse = models.CharField(max_length=255)
-   roles = models.ManyToManyField(Role)
+class UtilisateurManager(BaseUserManager):
+    def create_user(self, email, nom, prenom, motDePasse=None, **extra_fields):
+        if not email:
+            raise ValueError('L\'adresse e-mail doit être définie')
+        email = self.normalize_email(email)
+        utilisateur = self.model(email=email, nom=nom, prenom=prenom, **extra_fields)
+        utilisateur.set_password(mot_de_passe)
+        utilisateur.save(using=self._db)
+        return utilisateur
+
+    def create_superuser(self, email, nom, prenom, mot_de_passe=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+
+        return self.create_user(email, nom, prenom, mot_de_passe, **extra_fields)
+
+class Utilisateur(AbstractBaseUser, PermissionsMixin):
+    id = models.AutoField(primary_key=True)
+    nom = models.CharField(max_length=255)
+    prenom = models.CharField(max_length=255)
+    email = models.EmailField(unique=True)
+    roles = models.ManyToManyField(Role)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+
+    objects = UtilisateurManager()
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['nom', 'prenom']
 
 class Administrateur(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class TuteurPedagogique(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class CoordinatriceAlternance(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class MaitreAlternance(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class Promotion(models.Model):
    id = models.AutoField(primary_key=True)
@@ -57,8 +80,8 @@ class Promotion(models.Model):
 
 class Apprenti(models.Model):
    id = models.AutoField(primary_key=True)
-   idUtilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
-   idTuteurPedagogique = models.ForeignKey(TuteurPedagogique, on_delete=models.CASCADE)
-   idMaitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   tuteurPedagogique = models.ForeignKey(TuteurPedagogique, on_delete=models.CASCADE)
+   maitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
    optionMajeure = models.CharField(max_length=255)
    optionMineure = models.CharField(max_length=255)

@@ -2,19 +2,19 @@
     {
         "model": "api.MaitreAlternance",
         "fields": {
-          "idUtilisateur": 7
+          "utilisateur_id": 7
         }
     },
     {
         "model": "api.MaitreAlternance",
         "fields": {
-          "idUtilisateur": 8
+          "utilisateur_id": 8
         }
     },
     {
         "model": "api.MaitreAlternance",
         "fields": {
-          "idUtilisateur": 9
+          "utilisateur_id": 9
         }
     }
 ]

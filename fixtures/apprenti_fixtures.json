@@ -2,9 +2,9 @@
     {
         "model": "api.Apprenti",
         "fields": {
-          "idUtilisateur": 1,
-          "idTuteurPedagogique":1,
-          "idMaitreAlternance":1,
+          "utilisateur_id": 1,
+          "tuteurPedagogique_id":1,
+          "maitreAlternance_id":1,
           "optionMajeure":"",
           "optionMineure":""
         }
@@ -12,9 +12,9 @@
     {
         "model": "api.Apprenti",
         "fields": {
-            "idUtilisateur": 2,
-            "idTuteurPedagogique":2,
-            "idMaitreAlternance":2,
+            "utilisateur_id": 2,
+            "tuteurPedagogique_id":2,
+            "maitreAlternance_id":2,
             "optionMajeure":"EOC",
             "optionMineure":""
         }
@@ -22,9 +22,9 @@
     {
         "model": "api.Apprenti",
         "fields": {
-            "idUtilisateur": 3,
-            "idTuteurPedagogique":3,
-            "idMaitreAlternance":3,
+            "utilisateur_id": 3,
+            "tuteurPedagogique_id":3,
+            "maitreAlternance_id":3,
             "optionMajeure":"EOC",
             "optionMineure":"Plateforme Iot et Big Data"
         }

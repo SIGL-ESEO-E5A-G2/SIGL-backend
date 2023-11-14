@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-90h=m!vh*_19mpi1k1lgfu_p0d!^meqfx0cb9^zjoc!$*2h_6%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.0.0.21']
+ALLOWED_HOSTS = ['10.0.0.21', 'localhost']
 
 
 # Application definition
@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_framework_swagger',
+    'drf_yasg',
     'api'
 ]
 
@@ -75,13 +78,27 @@ WSGI_APPLICATION = 'sigl_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {  
+#         'ENGINE': 'django.db.backends.mysql',  
+#         'NAME': 'bdd-sigl-int',  
+#         'USER': 'administrateur',  
+#         'PASSWORD': 'DTK5CUWiWaqdTQEU0ngjuIQL57yive1GlZE991L',  
+#         'HOST': '10.0.0.22',  
+#         'PORT': '3306',  
+#         'OPTIONS': {  
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+#         }  
+#     }  
+# }
+
 DATABASES = {
     'default': {  
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'bdd-sigl-int',  
-        'USER': 'administrateur',  
-        'PASSWORD': 'DTK5CUWiWaqdTQEU0ngjuIQL57yive1GlZE991L',  
-        'HOST': '10.0.0.22',  
+        'NAME': 'testdb',  
+        'USER': 'root',  
+        'PASSWORD': 'superpassword',  
+        'HOST': 'host.docker.internal',  
         'PORT': '3306',  
         'OPTIONS': {  
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
@@ -108,6 +125,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'api.Utilisateur'
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -130,3 +149,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+
+}
