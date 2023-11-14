@@ -42,24 +42,39 @@ class AuthentificationSerializer(serializers.Serializer):
 
 #--- TuteurPedagogique ---
 
-class TuteurPedagogiqueSerializer(serializers.ModelSerializer):
+class TuteurPedagogiqueDetailSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
+    class Meta:
+        model = TuteurPedagogique
+        fields = '__all__'
+
+class TuteurPedagogiqueSerializer(serializers.ModelSerializer):
     class Meta:
         model = TuteurPedagogique
         fields = '__all__'
 
 #--- MaitreAlternance ---
 
-class MaitreAlternanceSerializer(serializers.ModelSerializer):
+class MaitreAlternanceDetailSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
+    class Meta:
+        model = MaitreAlternance
+        fields = '__all__'
+
+class MaitreAlternanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = MaitreAlternance
         fields = '__all__'
 
 #--- CoordinatriceAlternance ---
 
-class CoordinatriceAlternanceSerializer(serializers.ModelSerializer):
+class CoordinatriceAlternanceDetailSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
+    class Meta:
+        model = CoordinatriceAlternance
+        fields = '__all__'
+
+class CoordinatriceAlternanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = CoordinatriceAlternance
         fields = '__all__'

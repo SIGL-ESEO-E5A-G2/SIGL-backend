@@ -46,8 +46,11 @@ router.register('utilisateur', UtilisateurViewSet, basename='utilisateurs')
 router.register('apprenti', ApprentiViewSet, basename='apprenti')
 router.register('apprentidetail', ApprentiDetailViewSet, basename='apprenti')
 router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='utilisateurs')
+router.register('tuteurpedagogiquedetail', TuteurPedagogiqueViewSet, basename='utilisateurs')
 router.register('maitrealternance', MaitreAlternanceViewSet, basename='utilisateurs')
+router.register('maitrealternancedetail', MaitreAlternanceViewSet, basename='utilisateurs')
 router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='utilisateurs')
+router.register('coordinatricealternancedetail', CoordinatriceAlternanceViewSet, basename='utilisateurs')
 
 urlpatterns = [
    path('', include(router.urls)),
