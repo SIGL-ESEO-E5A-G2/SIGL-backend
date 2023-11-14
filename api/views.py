@@ -36,11 +36,6 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
         else:
             return Response({}, status=status.HTTP_401_UNAUTHORIZED)
 
-class DeconnexionUtilisateurView(APIView):
-    def post(self, request):
-        request.auth.delete()
-        return Response(status=status.HTTP_200_OK)
-
 #--- TuteurPedagogique ---
 
 class TuteurPedagogiqueViewSet(ModelViewSet):
