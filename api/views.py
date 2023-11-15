@@ -1,16 +1,11 @@
-from rest_framework import viewsets
+from rest_framework import status
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
-
-
-from api.serializers import *
-
-from api.models import Utilisateur, TuteurPedagogique, MaitreAlternance, CoordinatriceAlternance, Apprenti
-
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
-from rest_framework import status
-from rest_framework.views import APIView
+
+from api.serializers import *
+from api.models import Utilisateur, TuteurPedagogique, MaitreAlternance, CoordinatriceAlternance, Apprenti
 
 # =================== EXEMPLE =======================
 # class PersonViewSet(viewsets.ModelViewSet):
@@ -23,7 +18,7 @@ from rest_framework.views import APIView
 
 class UtilisateurViewSet(ModelViewSet):
     serializer_class = UtilisateurSerializer
- 
+
     def get_queryset(self):
         return Utilisateur.objects.all()
 
@@ -34,8 +29,7 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
             utilisateur = serializer.validated_data['utilisateur']
             token, created = Token.objects.get_or_create(user=utilisateur)
             return Response({'token': token.key, 'id': utilisateur.id}, status=status.HTTP_200_OK)
-        else:
-            return Response({}, status=status.HTTP_401_UNAUTHORIZED)
+        return Response({}, status=status.HTTP_401_UNAUTHORIZED)
 
 #--- TuteurPedagogique ---
 
@@ -83,13 +77,12 @@ class ApprentiDetailViewSet(ReadOnlyModelViewSet):
 
 class ApprentiViewSet(ModelViewSet):
     serializer_class = ApprentiSerializer
- 
+
     def get_queryset(self):
         return Apprenti.objects.all()
 
 class ApprentiDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = ApprentiDetailSerializer
- 
+
     def get_queryset(self):
         return Apprenti.objects.all()
-

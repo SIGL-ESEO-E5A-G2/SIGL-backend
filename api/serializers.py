@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from api.models import Utilisateur, TuteurPedagogique, CoordinatriceAlternance, MaitreAlternance, Apprenti, Role
-from django.contrib.auth import authenticate
+
 
 # =================== EXEMPLE =======================
 # class PersonSerializer(serializers.ModelSerializer):
@@ -94,9 +94,8 @@ class ApprentiDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Apprenti
         fields = '__all__'
-        
+      
 class ApprentiSerializer(serializers.ModelSerializer):
     class Meta:
         model = Apprenti
         fields = '__all__'
-

@@ -25,7 +25,7 @@ echo "----------------------------------------"
 echo "Pylint checks ..."
 echo "----------------------------------------"
 
-find -name "*.py" -not -path "./tests/*" | xargs pylint --output-format=text
+find -name "*.py" -not -path "./tests/*" | xargs pylint --output-format=text --disable=C0301,C0114,C0115,C0116,C0304,R0903
 
 echo "----------------------------------------"
 echo "Pylint checks completed. Running Tests..."

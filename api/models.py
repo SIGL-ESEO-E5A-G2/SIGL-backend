@@ -17,15 +17,15 @@ class SemestreEnum(models.TextChoices):
     S10 = 'S10', 'S10'
 
 class RoleEnum(models.TextChoices):
-   Apprenti = 'Apprenti', 'Apprenti'
-   TuteurPedagogique = 'TuteurPedagogique', 'TuteurPedagogique'
-   Administrateur = 'Administrateur', 'Administrateur'
-   CoordinatriceAlternance = 'CoordinatriceAlternance', 'CoordinatriceAlternance'
-   MaitreAlternance = 'MaitreAlternance', 'MaitreAlternance'
+    Apprenti = 'Apprenti', 'Apprenti'
+    TuteurPedagogique = 'TuteurPedagogique', 'TuteurPedagogique'
+    Administrateur = 'Administrateur', 'Administrateur'
+    CoordinatriceAlternance = 'CoordinatriceAlternance', 'CoordinatriceAlternance'
+    MaitreAlternance = 'MaitreAlternance', 'MaitreAlternance'
 
 class Role(models.Model):
-   id = models.AutoField(primary_key=True)
-   libelle = models.CharField(max_length=25, choices= RoleEnum.choices, default=RoleEnum.Apprenti)
+    id = models.AutoField(primary_key=True)
+    libelle = models.CharField(max_length=25, choices= RoleEnum.choices, default=RoleEnum.Apprenti)
 
 class UtilisateurManager(BaseUserManager):
     def create_user(self, email, nom, prenom, password=None, **extra_fields):
@@ -33,7 +33,7 @@ class UtilisateurManager(BaseUserManager):
             raise ValueError('L\'adresse e-mail doit être définie')
         email = self.normalize_email(email)
         utilisateur = self.model(email=email, nom=nom, prenom=prenom, **extra_fields)
-        utilisateur.set_password(mot_de_passe)
+        utilisateur.set_password(password)
         utilisateur.save(using=self._db)
         return utilisateur
 
@@ -58,30 +58,30 @@ class Utilisateur(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['nom', 'prenom']
 
 class Administrateur(models.Model):
-   id = models.AutoField(primary_key=True)
-   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    id = models.AutoField(primary_key=True)
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class TuteurPedagogique(models.Model):
-   id = models.AutoField(primary_key=True)
-   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    id = models.AutoField(primary_key=True)
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class CoordinatriceAlternance(models.Model):
-   id = models.AutoField(primary_key=True)
-   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    id = models.AutoField(primary_key=True)
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class MaitreAlternance(models.Model):
-   id = models.AutoField(primary_key=True)
-   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    id = models.AutoField(primary_key=True)
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class Promotion(models.Model):
-   id = models.AutoField(primary_key=True)
-   libelle = models.CharField(max_length=255)
-   semestre = models.CharField( max_length=3, choices=SemestreEnum.choices, default=SemestreEnum.S5)
+    id = models.AutoField(primary_key=True)
+    libelle = models.CharField(max_length=255)
+    semestre = models.CharField( max_length=3, choices=SemestreEnum.choices, default=SemestreEnum.S5)
 
 class Apprenti(models.Model):
-   id = models.AutoField(primary_key=True)
-   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
-   tuteurPedagogique = models.ForeignKey(TuteurPedagogique, on_delete=models.CASCADE)
-   maitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
-   optionMajeure = models.CharField(max_length=255)
-   optionMineure = models.CharField(max_length=255)
+    id = models.AutoField(primary_key=True)
+    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    tuteurPedagogique = models.ForeignKey(TuteurPedagogique, on_delete=models.CASCADE)
+    maitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
+    optionMajeure = models.CharField(max_length=255)
+    optionMineure = models.CharField(max_length=255)

@@ -55,7 +55,7 @@ class TestAuthentification(APITestCase):
         data = {'email': 'test@test.com', 'password': 'motdepasse'}
         response = self.client.post(self.url, data)
         self.assertEqual(response.status_code, 200)
-    
+
     def test_authentification_echec(self):
         data = {'email': 'test@test.com', 'password': 'motdepasse_faux'}
         response = self.client.post(self.url, data)
