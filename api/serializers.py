@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import Utilisateur, TuteurPedagogique, CoordinatriceAlternance, MaitreAlternance, Apprenti, Role, Administrateur
+from api.models import *
 from django.contrib.auth import authenticate
 
 # =================== EXEMPLE =======================
@@ -94,8 +94,8 @@ class CoordinatriceAlternanceSerializer(serializers.ModelSerializer):
 
 class ApprentiDetailSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
-    tuteurPedagogique = TuteurPedagogiqueSerializer(many=False)
-    maitreAlternance = MaitreAlternanceSerializer(many=False)
+    tuteurPedagogique = TuteurPedagogiqueDetailSerializer(many=False)
+    maitreAlternance = MaitreAlternanceDetailSerializer(many=False)
     class Meta:
         model = Apprenti
         fields = '__all__'
@@ -103,5 +103,34 @@ class ApprentiDetailSerializer(serializers.ModelSerializer):
 class ApprentiSerializer(serializers.ModelSerializer):
     class Meta:
         model = Apprenti
+        fields = '__all__'
+
+
+# --- Apprenti ---
+
+class MessageDetailSerializer(serializers.ModelSerializer):
+    utilisateur = UtilisateurSerializer(many=False)
+
+    class Meta:
+        model = Message
+        fields = '__all__'
+
+
+class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Message
+        fields = '__all__'
+
+class DepotDetailSerializer(serializers.ModelSerializer):
+    message = MessageDetailSerializer(many=False)
+
+    class Meta:
+        model = Depot
+        fields = '__all__'
+
+
+class DepotSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Depot
         fields = '__all__'
 

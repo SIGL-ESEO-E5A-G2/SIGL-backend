@@ -92,7 +92,8 @@ class Message(models.Model):
     id = models.AutoField(primary_key=True)
     titre = models.TextField()
     contenu = models.TextField()
-    date = models.DateField(default=date.today)
+    date = models.DateField(auto_now_add=True)
+    time = models.TimeField(auto_now_add=True)
     createur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, related_name='createur_message')
     destinataire = models.ManyToManyField(Utilisateur)
 

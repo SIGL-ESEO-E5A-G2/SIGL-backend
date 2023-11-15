@@ -92,9 +92,29 @@ class ApprentiViewSet(ModelViewSet):
     def get_queryset(self):
         return Apprenti.objects.all()
 
-class ApprentiDetailViewSet(ReadOnlyModelViewSet):
-    serializer_class = ApprentiDetailSerializer
- 
-    def get_queryset(self):
-        return Apprenti.objects.all()
 
+class MessageViewSet(ModelViewSet):
+    serializer_class = MessageSerializer
+
+    def get_queryset(self):
+        return Message.objects.all()
+
+
+class MessageDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = MessageDetailSerializer
+
+    def get_queryset(self):
+        return Message.objects.all()
+
+class DepotViewSet(ModelViewSet):
+    serializer_class = DepotSerializer
+
+    def get_queryset(self):
+        return Depot.objects.all()
+
+
+class DepotDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = DepotDetailSerializer
+
+    def get_queryset(self):
+        return Depot.objects.all()
