@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
-from datetime import date
+from datetime import date, datetime
 
 # =================== EXEMPLE =======================
 # class Species(models.Model):
@@ -92,8 +92,8 @@ class Message(models.Model):
     id = models.AutoField(primary_key=True)
     titre = models.TextField()
     contenu = models.TextField()
-    date = models.DateField(auto_now_add=True)
-    time = models.TimeField(auto_now_add=True)
+    date = models.DateField(default = date.today)
+    time = models.TimeField(default = datetime.now())
     createur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, related_name='createur_message')
     destinataire = models.ManyToManyField(Utilisateur)
 

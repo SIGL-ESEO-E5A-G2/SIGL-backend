@@ -109,8 +109,8 @@ class ApprentiSerializer(serializers.ModelSerializer):
 # --- Apprenti ---
 
 class MessageDetailSerializer(serializers.ModelSerializer):
-    utilisateur = UtilisateurSerializer(many=False)
-
+    createur = UtilisateurSerializer(many=False)
+    destinataire = UtilisateurSerializer(many=True)
     class Meta:
         model = Message
         fields = '__all__'
