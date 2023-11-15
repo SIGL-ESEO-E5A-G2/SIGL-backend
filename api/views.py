@@ -1,7 +1,9 @@
 from rest_framework import viewsets
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
+
 from api.serializers import *
+
 from api.models import Utilisateur, TuteurPedagogique, MaitreAlternance, CoordinatriceAlternance, Apprenti
 
 from rest_framework.authtoken.views import ObtainAuthToken
@@ -27,7 +29,6 @@ class UtilisateurViewSet(ModelViewSet):
 
 class AuthentificationUtilisateurView(ObtainAuthToken):
     def post(self, request, *args, **kwargs):
-        # print(request.data)
         serializer = AuthentificationSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True) :
             utilisateur = serializer.validated_data['utilisateur']
@@ -42,6 +43,7 @@ class TuteurPedagogiqueViewSet(ModelViewSet):
     serializer_class = TuteurPedagogiqueSerializer
     def get_queryset(self):
         return TuteurPedagogique.objects.all()
+
 
 class TuteurPedagogiqueDetailViewSet(ModelViewSet):
     serializer_class = TuteurPedagogiqueDetailSerializer
@@ -64,16 +66,20 @@ class CoordinatriceAlternanceDetailViewSet(ReadOnlyModelViewSet):
     def get_queryset(self):
         return CoordinatriceAlternance.objects.all()
 
+#--- CoordinatriceAlternance ---
+
 class CoordinatriceAlternanceViewSet(ModelViewSet):
     serializer_class = CoordinatriceAlternanceSerializer
     def get_queryset(self):
         return CoordinatriceAlternance.objects.all()
 
 #--- Apprenti ---
+
 class ApprentiDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = ApprentiDetailSerializer
     def get_queryset(self):
         return Apprenti.objects.all()
+
 
 class ApprentiViewSet(ModelViewSet):
     serializer_class = ApprentiSerializer
@@ -81,4 +87,9 @@ class ApprentiViewSet(ModelViewSet):
     def get_queryset(self):
         return Apprenti.objects.all()
 
+class ApprentiDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = ApprentiDetailSerializer
+ 
+    def get_queryset(self):
+        return Apprenti.objects.all()
 
