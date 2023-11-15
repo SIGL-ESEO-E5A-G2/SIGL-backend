@@ -5,14 +5,36 @@ if ! command -v python3 &> /dev/null; then
     exit 1 
 fi
 
-python3 -m pip install -r requirements-ci.txt
+read -p "Have you correctly configured Django with access to your local MySQL and started it? (y/n): " user_response
+
+
+if [[ $user_response =~ ^[Yy](es)?$ ]]; then
+    echo "Proceeding with the script..."
+else
+    echo "Please configure Django with access to your local MySQL and start it before running this script."
+    exit 1
+fi
+
+sudo apt-get install libmysqlclient-dev
+
+python3 -m pip install -r requirements.txt
 
 export exitcode=0
 
-echo "Pylint Check"
+echo "----------------------------------------"
+echo "Pylint checks ..."
+echo "----------------------------------------"
+
 find -name "*.py" -not -path "./tests/*" | xargs pylint --output-format=text
 
-echo "Run Tests"
-pytest -v --cov-report term --cov=sigl_api ./tests/
+echo "----------------------------------------"
+echo "Pylint checks completed. Running Tests..."
+echo "----------------------------------------"
+
+python3 manage.py test api
+
+echo "----------------------------------------"
+echo "Running Tests completed. End."
+echo "----------------------------------------"
 
 exit $exitcode
