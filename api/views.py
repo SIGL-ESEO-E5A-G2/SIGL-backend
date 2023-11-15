@@ -4,7 +4,7 @@ from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
 from api.serializers import *
 
-from api.models import Utilisateur, TuteurPedagogique, MaitreAlternance, CoordinatriceAlternance, Apprenti
+from api.models import *
 
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
@@ -36,6 +36,11 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
             return Response({'token': token.key, 'id': utilisateur.id}, status=status.HTTP_200_OK)
         else:
             return Response({}, status=status.HTTP_401_UNAUTHORIZED)
+
+class AdministrateurViewSet(ModelViewSet):
+    serializer_class = AdministrateurSerializer
+    def get_queryset(self):
+        return Administrateur.objects.all()
 
 #--- TuteurPedagogique ---
 

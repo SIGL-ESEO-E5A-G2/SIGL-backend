@@ -2,8 +2,7 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-from api.views import UtilisateurViewSet, ApprentiDetailViewSet, ApprentiViewSet, TuteurPedagogiqueViewSet, MaitreAlternanceViewSet, CoordinatriceAlternanceViewSet, AuthentificationUtilisateurView
-
+from api.views import *
 router = routers.SimpleRouter()
 
 # Puis lui déclarons une url basée sur le mot clé ‘category’ et notre view
@@ -51,6 +50,7 @@ router.register('maitrealternance', MaitreAlternanceViewSet, basename='utilisate
 router.register('maitrealternancedetail', MaitreAlternanceViewSet, basename='utilisateurs')
 router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='utilisateurs')
 router.register('coordinatricealternancedetail', CoordinatriceAlternanceViewSet, basename='utilisateurs')
+router.register('administrateur', AdministrateurViewSet, basename='utilisateurs')
 
 urlpatterns = [
    path('', include(router.urls)),

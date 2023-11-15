@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from api.models import Utilisateur, TuteurPedagogique, CoordinatriceAlternance, MaitreAlternance, Apprenti, Role
+from api.models import Utilisateur, TuteurPedagogique, CoordinatriceAlternance, MaitreAlternance, Apprenti, Role, Administrateur
 from django.contrib.auth import authenticate
 
 # =================== EXEMPLE =======================
@@ -40,6 +40,11 @@ class AuthentificationSerializer(serializers.Serializer):
 
         return data
 
+
+class AdministrateurSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Administrateur
+        fields = '__all__'
 #--- TuteurPedagogique ---
 
 class TuteurPedagogiqueDetailSerializer(serializers.ModelSerializer):
