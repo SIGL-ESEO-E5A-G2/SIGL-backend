@@ -44,10 +44,10 @@ schema_view = get_schema_view(
 
 router.register('utilisateur', UtilisateurViewSet, basename='utilisateurs')
 router.register('apprenti', ApprentiViewSet, basename='apprenti')
-router.register('apprentidetail', ApprentiDetailViewSet, basename='apprenti')
-router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='utilisateurs')
-router.register('maitrealternance', MaitreAlternanceViewSet, basename='utilisateurs')
-router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='utilisateurs')
+router.register('apprentidetail', ApprentiDetailViewSet, basename='apprentidetail')
+router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='tuteurpedagogique')
+router.register('maitrealternance', MaitreAlternanceViewSet, basename='maitrealternance')
+router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='coordinatricealternance')
 
 urlpatterns = [
    path('', include(router.urls)),
