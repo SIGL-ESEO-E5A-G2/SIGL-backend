@@ -2,8 +2,7 @@ from django.urls import include, path
 
 from rest_framework import routers
 
-from api.views import UtilisateurViewSet, ApprentiDetailViewSet, ApprentiViewSet, TuteurPedagogiqueViewSet, MaitreAlternanceViewSet, CoordinatriceAlternanceViewSet, AuthentificationUtilisateurView
-
+from api.views import *
 router = routers.SimpleRouter()
 
 # Puis lui déclarons une url basée sur le mot clé ‘category’ et notre view
@@ -48,10 +47,15 @@ router.register('apprentidetail', ApprentiDetailViewSet, basename='apprentidetai
 router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='tuteurpedagogique')
 router.register('maitrealternance', MaitreAlternanceViewSet, basename='maitrealternance')
 router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='coordinatricealternance')
-router.register('tuteurpedagogiquedetail', TuteurPedagogiqueViewSet, basename='utilisateurs')
-router.register('maitrealternancedetail', MaitreAlternanceViewSet, basename='utilisateurs')
-router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='utilisateurs')
-router.register('coordinatricealternancedetail', CoordinatriceAlternanceViewSet, basename='utilisateurs')
+router.register('tuteurpedagogiquedetail', TuteurPedagogiqueViewSet, basename='tuteurpedagogiquedetail')
+router.register('maitrealternancedetail', MaitreAlternanceViewSet, basename='maitrealternancedetail')
+router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='coordinatricealternance')
+router.register('coordinatricealternancedetail', CoordinatriceAlternanceDetailViewSet, basename='coordinatricealternancedetail')
+router.register('administrateur', AdministrateurViewSet, basename='administrateur')
+router.register('message', MessageViewSet, basename='message')
+router.register('messagedetail', MessageDetailViewSet, basename='messagedetail')
+router.register('depot', DepotViewSet, basename='depot')
+router.register('depotdetail', DepotDetailViewSet, basename='depotdetail')
 
 urlpatterns = [
    path('', include(router.urls)),

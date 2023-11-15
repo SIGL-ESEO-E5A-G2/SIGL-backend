@@ -1,0 +1,9 @@
+[
+    {
+        "model": "api.Depot",
+        "fields": {
+          "message":2,
+          "chemin_fichier": "/ici/la"
+        }
+    }
+]

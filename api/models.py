@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from datetime import date, datetime
 
 # =================== EXEMPLE =======================
 # class Species(models.Model):
@@ -85,3 +86,19 @@ class Apprenti(models.Model):
    maitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
    optionMajeure = models.CharField(max_length=255)
    optionMineure = models.CharField(max_length=255)
+
+
+class Message(models.Model):
+    id = models.AutoField(primary_key=True)
+    titre = models.TextField()
+    contenu = models.TextField()
+    date = models.DateField(default = date.today)
+    time = models.TimeField(default = datetime.now())
+    createur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, related_name='createur_message')
+    destinataire = models.ManyToManyField(Utilisateur)
+
+class Depot(models.Model):
+    id = models.AutoField(primary_key=True)
+    message = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    echeance = models.DateField(default=date.today)
+    chemin_fichier = models.CharField(max_length=255)

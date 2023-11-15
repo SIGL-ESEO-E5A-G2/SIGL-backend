@@ -4,7 +4,7 @@ from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 
 from api.serializers import *
 
-from api.models import Utilisateur, TuteurPedagogique, MaitreAlternance, CoordinatriceAlternance, Apprenti
+from api.models import *
 
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
@@ -36,6 +36,11 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
             return Response({'token': token.key, 'id': utilisateur.id}, status=status.HTTP_200_OK)
         else:
             return Response({}, status=status.HTTP_401_UNAUTHORIZED)
+
+class AdministrateurViewSet(ModelViewSet):
+    serializer_class = AdministrateurSerializer
+    def get_queryset(self):
+        return Administrateur.objects.all()
 
 #--- TuteurPedagogique ---
 
@@ -87,9 +92,29 @@ class ApprentiViewSet(ModelViewSet):
     def get_queryset(self):
         return Apprenti.objects.all()
 
-class ApprentiDetailViewSet(ReadOnlyModelViewSet):
-    serializer_class = ApprentiDetailSerializer
- 
-    def get_queryset(self):
-        return Apprenti.objects.all()
 
+class MessageViewSet(ModelViewSet):
+    serializer_class = MessageSerializer
+
+    def get_queryset(self):
+        return Message.objects.all()
+
+
+class MessageDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = MessageDetailSerializer
+
+    def get_queryset(self):
+        return Message.objects.all()
+
+class DepotViewSet(ModelViewSet):
+    serializer_class = DepotSerializer
+
+    def get_queryset(self):
+        return Depot.objects.all()
+
+
+class DepotDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = DepotDetailSerializer
+
+    def get_queryset(self):
+        return Depot.objects.all()
