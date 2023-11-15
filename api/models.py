@@ -28,7 +28,7 @@ class Role(models.Model):
    libelle = models.CharField(max_length=25, choices= RoleEnum.choices, default=RoleEnum.Apprenti)
 
 class UtilisateurManager(BaseUserManager):
-    def create_user(self, email, nom, prenom, motDePasse=None, **extra_fields):
+    def create_user(self, email, nom, prenom, password=None, **extra_fields):
         if not email:
             raise ValueError('L\'adresse e-mail doit être définie')
         email = self.normalize_email(email)

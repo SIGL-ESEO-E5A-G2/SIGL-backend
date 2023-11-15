@@ -48,6 +48,10 @@ router.register('apprentidetail', ApprentiDetailViewSet, basename='apprentidetai
 router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='tuteurpedagogique')
 router.register('maitrealternance', MaitreAlternanceViewSet, basename='maitrealternance')
 router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='coordinatricealternance')
+router.register('tuteurpedagogiquedetail', TuteurPedagogiqueViewSet, basename='utilisateurs')
+router.register('maitrealternancedetail', MaitreAlternanceViewSet, basename='utilisateurs')
+router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='utilisateurs')
+router.register('coordinatricealternancedetail', CoordinatriceAlternanceViewSet, basename='utilisateurs')
 
 urlpatterns = [
    path('', include(router.urls)),
