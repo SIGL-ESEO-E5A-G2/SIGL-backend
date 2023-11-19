@@ -11,6 +11,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
+from django.core.exceptions import SuspiciousOperation, EmptyResultSet
 
 # =================== EXEMPLE =======================
 # class PersonViewSet(viewsets.ModelViewSet):
@@ -118,3 +119,16 @@ class DepotDetailViewSet(ReadOnlyModelViewSet):
 
     def get_queryset(self):
         return Depot.objects.all()
+
+class MessageUtilisateurViewSet(ReadOnlyModelViewSet):
+    serializer_class = MessageDetailSerializer
+    def get_queryset(self):
+        if(self.request.data.get('utilisateur_id')) :
+            utilisateur_id = self.request.data.get('utilisateur_id')
+            message = Message.objects.filter(destinataire = utilisateur_id)
+            if message :
+                return Message.objects.filter(destinataire = utilisateur_id)
+            else :
+                raise EmptyResultSet("Aucun message pour l'utilsiateur")
+        else :
+            raise SuspiciousOperation('Invalid JSON, utilisateur_id is missing')
