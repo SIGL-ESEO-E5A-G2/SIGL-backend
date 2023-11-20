@@ -5,8 +5,8 @@
           "utilisateur_id": 1,
           "tuteurPedagogique_id":1,
           "maitreAlternance_id":1,
-          "optionMajeure":"",
-          "optionMineure":""
+          "optionMajeure":"N/A",
+          "optionMineure":"N/A"
         }
     },
     {
@@ -16,7 +16,7 @@
             "tuteurPedagogique_id":2,
             "maitreAlternance_id":2,
             "optionMajeure":"EOC",
-            "optionMineure":""
+            "optionMineure":"N/A"
         }
     },
     {

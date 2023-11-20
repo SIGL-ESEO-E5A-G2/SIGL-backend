@@ -84,8 +84,8 @@ class Apprenti(models.Model):
    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
    tuteurPedagogique = models.ForeignKey(TuteurPedagogique, on_delete=models.CASCADE)
    maitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
-   optionMajeure = models.CharField(max_length=255)
-   optionMineure = models.CharField(max_length=255)
+   optionMajeure = models.CharField(max_length=255, default="N/A")
+   optionMineure = models.CharField(max_length=255, default="N/A")
 
 
 class Message(models.Model):
