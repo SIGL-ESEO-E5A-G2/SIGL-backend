@@ -17,6 +17,12 @@ class RoleSerializer(serializers.ModelSerializer):
 #--- Utilisateur ---
 
 class UtilisateurSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Utilisateur
+        fields = '__all__'
+
+class UtilisateurDetailSerializer(serializers.ModelSerializer):
     roles = RoleSerializer(many=True)
 
     class Meta:

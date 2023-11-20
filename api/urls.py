@@ -42,6 +42,7 @@ schema_view = get_schema_view(
 )
 
 router.register('utilisateur', UtilisateurViewSet, basename='utilisateurs')
+router.register('utilisateurDetail', UtilisateurDetailViewSet, basename='utilisateurs')
 router.register('apprenti', ApprentiViewSet, basename='apprenti')
 router.register('apprentidetail', ApprentiDetailViewSet, basename='apprentidetail')
 router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='tuteurpedagogique')

@@ -27,6 +27,12 @@ class UtilisateurViewSet(ModelViewSet):
     def get_queryset(self):
         return Utilisateur.objects.all()
 
+class UtilisateurDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = UtilisateurDetailSerializer
+
+    def get_queryset(self):
+        return Utilisateur.objects.all()
+
 class AuthentificationUtilisateurView(ObtainAuthToken):
     def post(self, request, *args, **kwargs):
         serializer = AuthentificationSerializer(data=request.data)
