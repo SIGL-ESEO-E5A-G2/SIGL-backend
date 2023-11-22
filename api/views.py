@@ -56,13 +56,13 @@ class TuteurPedagogiqueViewSet(ModelViewSet):
         return TuteurPedagogique.objects.all()
 
 
-class TuteurPedagogiqueDetailViewSet(ModelViewSet):
+class TuteurPedagogiqueDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = TuteurPedagogiqueDetailSerializer
     def get_queryset(self):
         return TuteurPedagogique.objects.all()
 
 #--- MaitreAlternance ---
-class MaitreAlternanceDetailViewSet(ModelViewSet):
+class MaitreAlternanceDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = MaitreAlternanceDetailSerializer
     def get_queryset(self):
         return MaitreAlternance.objects.all()
