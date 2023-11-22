@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+
 ROOT_URLCONF = 'sigl_api.urls'
 
 TEMPLATES = [
@@ -175,3 +175,9 @@ CSP_SCRIPT_SRC = [
 CSP_STYLE_SRC = ["https://stackpath.bootstrapcdn.com"]
 CSP_IMG_SRC = ["'self'"]
 CSP_FRAME_SRC = ["https://docs.google.com"]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = [
+        'https://sigl.francecentral.cloudapp.azure.com',
+]
