@@ -176,8 +176,10 @@ CSP_STYLE_SRC = ["https://stackpath.bootstrapcdn.com"]
 CSP_IMG_SRC = ["'self'"]
 CSP_FRAME_SRC = ["https://docs.google.com"]
 
-CORS_ALLOW_ALL_ORIGINS = True
-
+CORS_ALLOWED_ORIGINS = [
+    "https://sigl.francecentral.cloudapp.azure.com",
+    # Autres origines autorisées
+]
 CSRF_TRUSTED_ORIGINS = [
         'https://sigl.francecentral.cloudapp.azure.com',
 ]
