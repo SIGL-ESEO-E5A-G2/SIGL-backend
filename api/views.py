@@ -10,7 +10,9 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework import status
+from django.core import serializers as core_serializers
 from rest_framework.views import APIView
+import jwt, datetime
 
 # =================== EXEMPLE =======================
 # class PersonViewSet(viewsets.ModelViewSet):
@@ -38,8 +40,18 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
         serializer = AuthentificationSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True) :
             utilisateur = serializer.validated_data['utilisateur']
-            token, created = Token.objects.get_or_create(user=utilisateur)
-            return Response({'token': token.key, 'id': utilisateur.id}, status=status.HTTP_200_OK)
+            payload={
+                'id':utilisateur.id,
+                'nom': utilisateur.nom,
+                'prenom': utilisateur.prenom,
+                'email': utilisateur.email,
+                'roles':core_serializers.serialize("json",utilisateur.roles.all()),
+                'exp': datetime.datetime.utcnow()+datetime.timedelta(minutes=60),
+                'iat':datetime.datetime.utcnow(),
+            }
+
+            token = jwt.encode(payload, 'secret', algorithm='HS256')
+            return Response({'token': token, 'id': utilisateur.id}, status=status.HTTP_200_OK)
         else:
             return Response({}, status=status.HTTP_401_UNAUTHORIZED)
 

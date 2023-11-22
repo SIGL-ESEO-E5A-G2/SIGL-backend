@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from api.models import *
 from django.contrib.auth import authenticate
+from rest_framework.exceptions import AuthenticationFailed
 
 # =================== EXEMPLE =======================
 # class PersonSerializer(serializers.ModelSerializer):
@@ -40,9 +41,9 @@ class AuthentificationSerializer(serializers.Serializer):
             if utilisateur:
                 data['utilisateur'] = utilisateur
             else:
-                raise serializers.ValidationError("L'adresse e-mail ou le mot de passe est incorrect.")
+                raise AuthenticationFailed("L'adresse e-mail ou le mot de passe est incorrect.")
         else:
-            raise serializers.ValidationError("L'adresse e-mail et le mot de passe sont requis.")
+            raise AuthenticationFailed("L'adresse e-mail et le mot de passe sont requis.")
 
         return data
 
