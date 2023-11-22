@@ -60,7 +60,6 @@ class TuteurPedagogiqueDetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class TuteurPedagogiqueSerializer(serializers.ModelSerializer):
-    utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = TuteurPedagogique
         fields = '__all__'
@@ -75,7 +74,6 @@ class MaitreAlternanceDetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class MaitreAlternanceSerializer(serializers.ModelSerializer):
-    utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = MaitreAlternance
         fields = '__all__'
@@ -91,7 +89,6 @@ class CoordinatriceAlternanceDetailSerializer(serializers.ModelSerializer):
 
 
 class CoordinatriceAlternanceSerializer(serializers.ModelSerializer):
-    utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = CoordinatriceAlternance
         fields = '__all__'
