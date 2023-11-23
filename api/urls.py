@@ -59,6 +59,7 @@ router.register('messagedetail', MessageDetailViewSet, basename='messagedetail')
 router.register('depot', DepotViewSet, basename='depot')
 router.register('depotdetail', DepotDetailViewSet, basename='depotdetail')
 router.register('promotion', PromotionViewSet, basename='promotion')
+router.register('apprentipromotion', ApprentiPromotionViewSet, basename='apprentipromotion')
 
 urlpatterns = [
    path('', include(router.urls)),
