@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from api.models import *
 from django.contrib.auth import authenticate
+from rest_framework.exceptions import AuthenticationFailed
 
 # =================== EXEMPLE =======================
 # class PersonSerializer(serializers.ModelSerializer):
@@ -36,13 +37,13 @@ class AuthentificationSerializer(serializers.Serializer):
         email = data.get('email')
         password = data.get('password')
         if email and password:
-            utilisateur =Utilisateur.objects.filter(email=email, password=password).first()
+            utilisateur =authenticate(email=email, password=password)
             if utilisateur:
                 data['utilisateur'] = utilisateur
             else:
-                raise serializers.ValidationError("L'adresse e-mail ou le mot de passe est incorrect.")
+                raise AuthenticationFailed("L'adresse e-mail ou le mot de passe est incorrect.")
         else:
-            raise serializers.ValidationError("L'adresse e-mail et le mot de passe sont requis.")
+            raise AuthenticationFailed("L'adresse e-mail et le mot de passe sont requis.")
 
         return data
 
@@ -60,7 +61,6 @@ class TuteurPedagogiqueDetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class TuteurPedagogiqueSerializer(serializers.ModelSerializer):
-    utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = TuteurPedagogique
         fields = '__all__'
@@ -75,7 +75,6 @@ class MaitreAlternanceDetailSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class MaitreAlternanceSerializer(serializers.ModelSerializer):
-    utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = MaitreAlternance
         fields = '__all__'
@@ -91,7 +90,6 @@ class CoordinatriceAlternanceDetailSerializer(serializers.ModelSerializer):
 
 
 class CoordinatriceAlternanceSerializer(serializers.ModelSerializer):
-    utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = CoordinatriceAlternance
         fields = '__all__'

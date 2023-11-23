@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
+
 ROOT_URLCONF = 'sigl_api.urls'
 
 TEMPLATES = [
@@ -163,11 +163,34 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
 DATE_FORMAT = "%d/%m/%Y"
 REST_FRAMEWORK = {
-
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication',
+    ]
 }
 
-CSP_DEFAULT_SRC = ("'none'",)
-CSP_STYLE_SRC = ("'self'", 'fonts.googleapis.com')
-CSP_SCRIPT_SRC = ("'self'",)
-CSP_FONT_SRC = ("'self'", 'fonts.gstatic.com')
-CSP_IMG_SRC = ("'self'",)
+CSP_DEFAULT_SRC = ["'none'"]
+CSP_SCRIPT_SRC = [
+    "https://stackpath.bootstrapcdn.com",
+    "https://cdn.jsdelivr.net",
+    "https://code.jquery.com"
+]
+CSP_STYLE_SRC = ["https://stackpath.bootstrapcdn.com"]
+CSP_IMG_SRC = ["'self'"]
+CSP_FRAME_SRC = ["https://docs.google.com"]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://sigl.francecentral.cloudapp.azure.com",
+    # Autres origines autorisées
+]
+CSRF_TRUSTED_ORIGINS = [
+        'https://sigl.francecentral.cloudapp.azure.com',
+]
+
+SIMPLE_JWT={
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=2),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'SIGNING_KEY': 'secret',
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'USER_ID_FIELD': 'utilisateur_id'
+}
+

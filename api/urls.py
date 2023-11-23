@@ -31,6 +31,7 @@ from rest_framework_swagger.views import get_swagger_view
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
+from rest_framework.authtoken.views import obtain_auth_token
 from django.conf import settings
 
 schema_view = get_schema_view(
@@ -48,8 +49,8 @@ router.register('apprentidetail', ApprentiDetailViewSet, basename='apprentidetai
 router.register('tuteurpedagogique', TuteurPedagogiqueViewSet, basename='tuteurpedagogique')
 router.register('maitrealternance', MaitreAlternanceViewSet, basename='maitrealternance')
 router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='coordinatricealternance')
-router.register('tuteurpedagogiquedetail', TuteurPedagogiqueViewSet, basename='tuteurpedagogiquedetail')
-router.register('maitrealternancedetail', MaitreAlternanceViewSet, basename='maitrealternancedetail')
+router.register('tuteurpedagogiquedetail', TuteurPedagogiqueDetailViewSet, basename='tuteurpedagogiquedetail')
+router.register('maitrealternancedetail', MaitreAlternanceDetailViewSet, basename='maitrealternancedetail')
 router.register('coordinatricealternance', CoordinatriceAlternanceViewSet, basename='coordinatricealternance')
 router.register('coordinatricealternancedetail', CoordinatriceAlternanceDetailViewSet, basename='coordinatricealternancedetail')
 router.register('administrateur', AdministrateurViewSet, basename='administrateur')
@@ -62,5 +63,5 @@ urlpatterns = [
    path('', include(router.urls)),
    path('authentification/', AuthentificationUtilisateurView.as_view(), name='authentification'),
    path('docs/', schema_view.with_ui('swagger', cache_timeout=0),name='schema-swagger-ui'),
-
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),  # <-- And here
 ]

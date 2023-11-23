@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
-
+from rest_framework.permissions import IsAuthenticated
 
 from api.serializers import *
 
@@ -10,7 +10,9 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework import status
+from django.core import serializers as core_serializers
 from rest_framework.views import APIView
+import jwt, datetime
 
 # =================== EXEMPLE =======================
 # class PersonViewSet(viewsets.ModelViewSet):
@@ -23,9 +25,19 @@ from rest_framework.views import APIView
 
 class UtilisateurViewSet(ModelViewSet):
     serializer_class = UtilisateurSerializer
- 
+    #permission_classes = {IsAuthenticated, }
     def get_queryset(self):
         return Utilisateur.objects.all()
+
+    def create(self, request, *args, **kwargs):
+        print(request.data)
+        utilisateur = Utilisateur.objects.create_user(email=request.data['email'],
+                                                      nom=request.data['nom'],
+                                                      prenom=request.data['prenom'],
+                                                      mot_de_passe=request.data['password'])
+
+        return Response({'id': utilisateur.id}, status=status.HTTP_200_OK)
+
 
 class UtilisateurDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = UtilisateurDetailSerializer
@@ -38,8 +50,25 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
         serializer = AuthentificationSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True) :
             utilisateur = serializer.validated_data['utilisateur']
-            token, created = Token.objects.get_or_create(user=utilisateur)
-            return Response({'token': token.key, 'id': utilisateur.id}, status=status.HTTP_200_OK)
+            payload={
+                'id':utilisateur.id,
+                'nom': utilisateur.nom,
+                'prenom': utilisateur.prenom,
+                'email': utilisateur.email,
+                'roles':core_serializers.serialize("json",utilisateur.roles.all()),
+                'exp': datetime.datetime.utcnow()+datetime.timedelta(minutes=60),
+                'iat':datetime.datetime.utcnow(),
+            }
+
+            jwt_token = jwt.encode(payload, 'secret', algorithm='HS256')
+            token = Token.objects.get_or_create(user=utilisateur)
+
+            response = Response({'jwt_token': jwt_token, 'access_token': str(token[0]), 'id': utilisateur.id}, status=status.HTTP_200_OK)
+
+            # Autoriser les connexions depuis le domaine de l'application front-end
+            response["Content-Security-Policy"] = "default-src 'self' https://sigl.francecentral.cloudapp.azure.com"
+
+            return response
         else:
             return Response({}, status=status.HTTP_401_UNAUTHORIZED)
 
@@ -56,13 +85,13 @@ class TuteurPedagogiqueViewSet(ModelViewSet):
         return TuteurPedagogique.objects.all()
 
 
-class TuteurPedagogiqueDetailViewSet(ModelViewSet):
+class TuteurPedagogiqueDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = TuteurPedagogiqueDetailSerializer
     def get_queryset(self):
         return TuteurPedagogique.objects.all()
 
 #--- MaitreAlternance ---
-class MaitreAlternanceDetailViewSet(ModelViewSet):
+class MaitreAlternanceDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = MaitreAlternanceDetailSerializer
     def get_queryset(self):
         return MaitreAlternance.objects.all()

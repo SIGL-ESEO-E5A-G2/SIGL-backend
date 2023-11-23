@@ -6,7 +6,7 @@
             "nom": "ALLORY",
             "prenom": "Corantin",
             "email": "corantin.allory@reseau.eseo.fr",
-            "password": "MotDePasseAleatoire1",
+            "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
             "roles":[1]
         }
     },
@@ -17,7 +17,7 @@
           "nom": "AINS",
           "prenom": "Nathan",
           "email": "nathan.ains@reseau.eseo.fr",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[1]
         }
     },
@@ -28,7 +28,7 @@
           "nom": "ABAZIOU",
           "prenom": "Yann",
           "email": "Yann.ABAZIOU@reseau.eseo.fr",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[1]
         }
     },
@@ -39,7 +39,7 @@
           "nom": "PLANTIER",
           "prenom": "Guy",
           "email": "guy.plantier@eseo.fr",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[2]
         }
     },
@@ -50,7 +50,7 @@
           "nom": "COLIN",
           "prenom": "Vincent",
           "email": "vincent.colin@eseo.fr",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[2]
         }
     },
@@ -61,7 +61,7 @@
           "nom": "TISSIER",
           "prenom": "Jérôme",
           "email": "jerome.tissier@eseo.fr",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[2]
         }
     },
@@ -72,7 +72,7 @@
           "nom": "GIRARD",
           "prenom": "Arnaud",
           "email": "agirard@wabtec.com",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[5]
         }
     },
@@ -83,7 +83,7 @@
           "nom": "LEGRAND",
           "prenom": "Marc",
           "email": "marc.legrand@lorillard.fr",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[5]
         }
     },
@@ -94,7 +94,7 @@
           "nom": "SADAN KOWADLO",
           "prenom": "Robin",
           "email": "robin.sadan-kowadlo@thalesgroup.com",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[5]
         }
     },
@@ -105,7 +105,7 @@
           "nom": "CHOLLET",
           "prenom": "Coraline",
           "email": "coraline.chollet@eseo.fr",
-          "password": "MotDePasse1",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
           "roles":[4, 3]
         }
     },
@@ -116,7 +116,7 @@
           "nom": "ADMIN",
           "prenom": "admin",
           "email": "admin@eseo.fr",
-          "password": "admin",
+          "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
           "roles":[3]
         }
     }
