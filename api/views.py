@@ -30,7 +30,7 @@ class UtilisateurViewSet(ModelViewSet):
         return Utilisateur.objects.all()
 
     def create(self, request, *args, **kwargs):
-        print(request.data)
+
         utilisateur = Utilisateur.objects.create_user(email=request.data['email'],
                                                       nom=request.data['nom'],
                                                       prenom=request.data['prenom'],
@@ -153,3 +153,21 @@ class DepotDetailViewSet(ReadOnlyModelViewSet):
 
     def get_queryset(self):
         return Depot.objects.all()
+
+class PromotionViewSet(ModelViewSet):
+    serializer_class = PromotionSerializer
+
+    def get_queryset(self):
+        return Promotion.objects.all()
+
+class ApprentiPromotionViewSet(ModelViewSet):
+    serializer_class = ApprentiDetailSerializer
+    def get_queryset(self):
+        try :
+            promotion = self.request.query_params.get('promotion')
+            print(self.request.query_params)
+            return Apprenti.objects.filter(promotion = promotion)
+        except Exception as error :
+            print(error)
+            raise serializers.ValidationError({'promotion': 'Veuillez indiquer une promotion'})
+
