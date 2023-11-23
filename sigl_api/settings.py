@@ -180,11 +180,11 @@ CSP_FRAME_SRC = ["https://docs.google.com"]
 
 CORS_ALLOWED_ORIGINS = [
     "https://sigl.francecentral.cloudapp.azure.com",
-    "http://localhost:5173/"
+    "http://localhost:5173"
 ]
 CSRF_TRUSTED_ORIGINS = [
         'https://sigl.francecentral.cloudapp.azure.com',
-        'http://localhost:5173/'
+        'http://localhost:5173'
 ]
 
 SIMPLE_JWT={
