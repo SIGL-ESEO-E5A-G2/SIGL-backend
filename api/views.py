@@ -61,7 +61,9 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
             }
 
             jwt_token = jwt.encode(payload, 'secret', algorithm='HS256')
-            response = Response({'jwt_token': jwt_token, 'id': utilisateur.id}, status=status.HTTP_200_OK)
+            token = Token.objects.get_or_create(user=utilisateur)
+
+            response = Response({'jwt_token': jwt_token, 'access_token': str(token[0]), 'id': utilisateur.id}, status=status.HTTP_200_OK)
 
             # Autoriser les connexions depuis le domaine de l'application front-end
             response["Content-Security-Policy"] = "default-src 'self' https://sigl.francecentral.cloudapp.azure.com"
