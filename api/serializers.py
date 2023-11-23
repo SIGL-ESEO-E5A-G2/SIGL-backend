@@ -10,6 +10,10 @@ from rest_framework.exceptions import AuthenticationFailed
 #        fields = ('name', 'birth_year', 'eye_color', 'species')
 # =================== EXEMPLE =======================
 
+class PromotionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Promotion
+        fields = '__all__'
 class RoleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Role
@@ -100,6 +104,7 @@ class ApprentiDetailSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
     tuteurPedagogique = TuteurPedagogiqueDetailSerializer(many=False)
     maitreAlternance = MaitreAlternanceDetailSerializer(many=False)
+    promotion = PromotionSerializer(many=False)
     class Meta:
         model = Apprenti
         fields = '__all__'

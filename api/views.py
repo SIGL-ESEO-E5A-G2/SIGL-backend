@@ -153,3 +153,9 @@ class DepotDetailViewSet(ReadOnlyModelViewSet):
 
     def get_queryset(self):
         return Depot.objects.all()
+
+class PromotionViewSet(ModelViewSet):
+    serializer_class = PromotionSerializer
+
+    def get_queryset(self):
+        return Promotion.objects.all()

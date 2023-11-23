@@ -86,6 +86,7 @@ class Apprenti(models.Model):
    maitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
    optionMajeure = models.CharField(max_length=255, default="N/A")
    optionMineure = models.CharField(max_length=255, default="N/A")
+   promotion = models.ForeignKey(Promotion, on_delete=models.CASCADE)
 
 
 class Message(models.Model):
