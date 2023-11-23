@@ -37,7 +37,7 @@ class AuthentificationSerializer(serializers.Serializer):
         email = data.get('email')
         password = data.get('password')
         if email and password:
-            utilisateur =Utilisateur.objects.filter(email=email, password=password).first()
+            utilisateur =authenticate(email=email, password=password)
             if utilisateur:
                 data['utilisateur'] = utilisateur
             else:

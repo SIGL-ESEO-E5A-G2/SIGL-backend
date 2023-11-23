@@ -1,5 +1,3 @@
-#!/bin/bash
-
 python ../manage.py loaddata utilisateur_fixtures.json \
                              role_fixtures.json \
                              promotion_fixtures.json \

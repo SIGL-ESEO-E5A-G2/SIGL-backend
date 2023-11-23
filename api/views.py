@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
-
+from rest_framework.permissions import IsAuthenticated
 
 from api.serializers import *
 
@@ -25,9 +25,19 @@ import jwt, datetime
 
 class UtilisateurViewSet(ModelViewSet):
     serializer_class = UtilisateurSerializer
- 
+    #permission_classes = {IsAuthenticated, }
     def get_queryset(self):
         return Utilisateur.objects.all()
+
+    def create(self, request, *args, **kwargs):
+        print(request.data)
+        utilisateur = Utilisateur.objects.create_user(email=request.data['email'],
+                                                      nom=request.data['nom'],
+                                                      prenom=request.data['prenom'],
+                                                      mot_de_passe=request.data['password'])
+
+        return Response({'id': utilisateur.id}, status=status.HTTP_200_OK)
+
 
 class UtilisateurDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = UtilisateurDetailSerializer
@@ -50,8 +60,8 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
                 'iat':datetime.datetime.utcnow(),
             }
 
-            token = jwt.encode(payload, 'secret', algorithm='HS256')
-            response = Response({'token': token, 'id': utilisateur.id}, status=status.HTTP_200_OK)
+            jwt_token = jwt.encode(payload, 'secret', algorithm='HS256')
+            response = Response({'jwt_token': jwt_token, 'id': utilisateur.id}, status=status.HTTP_200_OK)
 
             # Autoriser les connexions depuis le domaine de l'application front-end
             response["Content-Security-Policy"] = "default-src 'self' https://sigl.francecentral.cloudapp.azure.com"
