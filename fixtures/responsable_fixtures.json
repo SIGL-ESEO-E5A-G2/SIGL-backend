@@ -1,0 +1,35 @@
+[
+  {
+    "model": "api.ResponsableEntreprise",
+        "fields": {
+            "nom" : "Responsable",
+            "prenom": "Smitt",
+            "telephone" : "0102030405",
+            "email" : "responsable@smitt.fr",
+            "ancienEseo":false,
+            "entreprise_id": 1
+        }
+  },
+  {
+    "model": "api.ResponsableEntreprise",
+        "fields": {
+            "nom" : "Responsable",
+            "prenom": "Lorillard",
+            "telephone" : "0102030405",
+            "email" : "responsable@lorillard.fr",
+            "ancienEseo":false,
+            "entreprise_id": 2
+        }
+  },
+  {
+    "model": "api.ResponsableEntreprise",
+        "fields": {
+            "nom" : "Responsable",
+            "prenom": "Thales",
+            "telephone" : "0102030405",
+            "email" : "responsable@thales.fr",
+            "ancienEseo":true,
+            "entreprise_id": 3
+        }
+  }
+]

@@ -7,7 +7,13 @@
             "maitreAlternance_id":1,
             "optionMajeure":"N/A",
             "optionMineure":"N/A",
-            "promotion": 1
+            "promotion": 1,
+            "intitulePoste" : "Apprenti Ingénieur",
+            "descriptifPoste": "Développe des choses d'ingénieurs",
+            "classificationConventionCollective" : "Coef TGA 255",
+            "dureeHebdoContrat" : 35,
+            "entreprise_id": 1,
+            "opco_id": 1
         }
     },
     {
@@ -18,7 +24,13 @@
             "maitreAlternance_id":2,
             "optionMajeure":"EOC",
             "optionMineure":"N/A",
-            "promotion": 2
+            "promotion": 2,
+            "intitulePoste" : "Apprenti Ingénieur",
+            "descriptifPoste": "Développe des choses d'ingénieurs",
+            "classificationConventionCollective" : "Coef TGA 255",
+            "dureeHebdoContrat" : 35,
+            "entreprise_id": 2,
+            "opco_id": 1
         }
     },
     {
@@ -29,7 +41,13 @@
             "maitreAlternance_id":3,
             "optionMajeure":"EOC",
             "optionMineure":"Plateforme Iot et Big Data",
-            "promotion": 3
+            "promotion": 3,
+            "intitulePoste" : "Apprenti Ingénieur",
+            "descriptifPoste": "Développe des choses d'ingénieurs",
+            "classificationConventionCollective" : "Coef TGA 255",
+            "dureeHebdoContrat" : 35,
+            "entreprise_id": 3,
+            "opco_id": 2
         }
     }
 ]

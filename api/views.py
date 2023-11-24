@@ -127,6 +127,11 @@ class ApprentiViewSet(ModelViewSet):
     def get_queryset(self):
         return Apprenti.objects.all()
 
+class TagViewSet(ModelViewSet):
+    serializer_class = TagSerializer
+
+    def get_queryset(self):
+        return Tag.objects.all()
 
 class MessageViewSet(ModelViewSet):
     serializer_class = MessageSerializer
@@ -156,9 +161,28 @@ class DepotDetailViewSet(ReadOnlyModelViewSet):
 
 class PromotionViewSet(ModelViewSet):
     serializer_class = PromotionSerializer
-
     def get_queryset(self):
         return Promotion.objects.all()
+
+class EntrepriseViewSet(ModelViewSet):
+    serializer_class = EntrepriseSerializer
+    def get_queryset(self):
+        return Entreprise.objects.all()
+
+class OpcoViewSet(ModelViewSet):
+    serializer_class = OpcoSerializer
+    def get_queryset(self):
+        return Opco.objects.all()
+
+class ResponsableEntrepriseViewSet(ModelViewSet):
+    serializer_class = ResponsableEntrepriseSerializer
+    def get_queryset(self):
+        return ResponsableEntreprise.objects.all()
+
+class ResponsableEntrepriseDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = ResponsableEntrepriseDetailSerializer
+    def get_queryset(self):
+        return ResponsableEntreprise.objects.all()
 
 class ApprentiPromotionViewSet(ModelViewSet):
     serializer_class = ApprentiDetailSerializer
@@ -170,4 +194,20 @@ class ApprentiPromotionViewSet(ModelViewSet):
         except Exception as error :
             print(error)
             raise serializers.ValidationError({'promotion': 'Veuillez indiquer une promotion'})
+
+
+class EvenementViewSet(ModelViewSet):
+    serializer_class = EvenementSerializer
+    def get_queryset(self):
+        return Evenement.objects.all()
+
+class EntretienSemestrielViewSet(ModelViewSet):
+    serializer_class = EntretienSemestrielSerializer
+    def get_queryset(self):
+        return EntretienSemestriel.objects.all()
+
+class EntretienSemestrielDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = EntretienSemestrielDetailSerializer
+    def get_queryset(self):
+        return EntretienSemestriel.objects.all()
 

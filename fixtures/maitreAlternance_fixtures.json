@@ -2,19 +2,31 @@
     {
         "model": "api.MaitreAlternance",
         "fields": {
-          "utilisateur_id": 7
+          "utilisateur_id": 7,
+            "fonction" : "Ingénieur",
+            "dernierDiplome": "Diplôme d'ingénieur",
+            "ancienEseo" : true,
+            "entreprise_id": 1
         }
     },
     {
         "model": "api.MaitreAlternance",
         "fields": {
-          "utilisateur_id": 8
+          "utilisateur_id": 8,
+            "fonction" : "Ingénieur",
+            "dernierDiplome": "Diplôme d'ingénieur",
+            "ancienEseo" : false,
+            "entreprise_id": 2
         }
     },
     {
         "model": "api.MaitreAlternance",
         "fields": {
-          "utilisateur_id": 9
+          "utilisateur_id": 9,
+            "fonction" : "Ingénieur",
+            "dernierDiplome": "Diplôme d'ingénieur",
+            "ancienEseo" : true,
+            "entreprise_id": 3
         }
     }
 ]

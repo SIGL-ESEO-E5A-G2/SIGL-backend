@@ -7,7 +7,8 @@
             "prenom": "Corantin",
             "email": "corantin.allory@reseau.eseo.fr",
             "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-            "roles":[1]
+            "roles":[1],
+            "telephone": "0102030405"
         }
     },
     {
@@ -18,7 +19,8 @@
           "prenom": "Nathan",
           "email": "nathan.ains@reseau.eseo.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[1]
+          "roles":[1],
+          "telephone": "0102030405"
         }
     },
     {
@@ -29,7 +31,8 @@
           "prenom": "Yann",
           "email": "Yann.ABAZIOU@reseau.eseo.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[1]
+          "roles":[1],
+          "telephone": "0102030405"
         }
     },
     {
@@ -40,7 +43,8 @@
           "prenom": "Guy",
           "email": "guy.plantier@eseo.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[2]
+          "roles":[2],
+          "telephone": "0102030405"
         }
     },
     {
@@ -51,7 +55,8 @@
           "prenom": "Vincent",
           "email": "vincent.colin@eseo.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[2]
+          "roles":[2],
+          "telephone": "0102030405"
         }
     },
     {
@@ -62,7 +67,8 @@
           "prenom": "Jérôme",
           "email": "jerome.tissier@eseo.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[2]
+          "roles":[2],
+          "telephone": "0102030405"
         }
     },
     {
@@ -73,7 +79,8 @@
           "prenom": "Arnaud",
           "email": "agirard@wabtec.com",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[5]
+          "roles":[5],
+          "telephone": "0102030405"
         }
     },
     {
@@ -84,7 +91,8 @@
           "prenom": "Marc",
           "email": "marc.legrand@lorillard.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[5]
+          "roles":[5],
+          "telephone": "0102030405"
         }
     },
     {
@@ -95,7 +103,8 @@
           "prenom": "Robin",
           "email": "robin.sadan-kowadlo@thalesgroup.com",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[5]
+          "roles":[5],
+          "telephone": "0102030405"
         }
     },
     {
@@ -106,7 +115,8 @@
           "prenom": "Coraline",
           "email": "coraline.chollet@eseo.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[4, 3]
+          "roles":[3],
+          "telephone": "0102030405"
         }
     },
     {
@@ -117,7 +127,8 @@
           "prenom": "admin",
           "email": "admin@eseo.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
-          "roles":[3]
+          "roles":[3],
+          "telephone": "0102030405"
         }
     }
     
