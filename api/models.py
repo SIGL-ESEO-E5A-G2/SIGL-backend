@@ -93,7 +93,7 @@ class ResponsableEntreprise(models.Model):
    telephone = models.CharField(max_length=255)
    email = models.CharField(max_length=255)
    fonction = models.CharField(max_length=255)
-   ancienEseo = models.BinaryField(default=False)
+   ancienEseo = models.BooleanField(default=False)
    entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE)
 
 class Opco(models.Model):
@@ -109,7 +109,7 @@ class MaitreAlternance(models.Model):
    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
    fonction = models.CharField(max_length=255, default="N/A")
    dernierDiplome = models.CharField(max_length=255, default="N/A")
-   ancienEseo = models.BinaryField(default=False)
+   ancienEseo = models.BooleanField(default=False)
    entreprise = models.ForeignKey(Entreprise, blank=True, null=True, on_delete= models.SET_NULL)
 
 class Promotion(models.Model):
@@ -144,7 +144,7 @@ class TypeTagEnum(models.TextChoices):
 class Tag(models.Model):
     id = models.AutoField(primary_key=True)
     libelle = models.CharField(max_length=255, default="N/A")
-    models.CharField(max_length=10, choices=TypeTagEnum.choices, default=TypeTagEnum.AUTRE)
+    type = models.CharField(max_length=10, choices=TypeTagEnum.choices, default=TypeTagEnum.AUTRE)
 
 class Message(models.Model):
     id = models.AutoField(primary_key=True)
@@ -154,6 +154,7 @@ class Message(models.Model):
     time = models.TimeField(default = datetime.now())
     createur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, related_name='createur_message')
     destinataire = models.ManyToManyField(Utilisateur)
+    tags = models.ManyToManyField(Tag)
 
 class Depot(models.Model):
     id = models.AutoField(primary_key=True)

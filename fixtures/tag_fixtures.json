@@ -1,0 +1,51 @@
+[
+  {
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Synthèse S5",
+          "type" : "Livrable"
+        }
+  },{
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Synthèse S6",
+          "type" : "Livrable"
+        }
+  },{
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Synthèse S7",
+          "type" : "Livrable"
+        }
+  },{
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Synthèse S8",
+          "type" : "Livrable"
+        }
+  },{
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Synthèse S9",
+          "type" : "Livrable"
+        }
+  },{
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Synthèse S10",
+          "type" : "Livrable"
+        }
+  },{
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Notes de période",
+          "type" : "Note"
+        }
+  },{
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Info",
+          "type" : "Autre"
+        }
+  }
+]
