@@ -1,0 +1,51 @@
+[
+  {
+    "model": "api.Entreprise",
+        "fields": {
+          "raisonSociale" : "MORS SMITT FRANCE - Sablé-sur-Sarthe (72)",
+          "adresse" :"2 Rue de la Mandinière, 72300 Sablé-sur-Sarthe",
+          "secteurDactivite" : "Electronique",
+          "description" :"Une entreprise d'Electronique" ,
+          "siret" :"48135205847561" ,
+          "libelleCPNE" : "CPNE de l'électronique",
+          "codeIDCC" : "1504",
+          "conventionCollective" : "CC des industries métallurgiques, mécaniques, électriques, électroniques connexes et similaires du Maine-et-Loire",
+          "codeNAF" : "16502Z",
+          "telephone" : "0102030405",
+          "email" : "mors.smitt@smitt.fr",
+          "nombreSalarie" :1500
+        }
+  },{
+    "model": "api.Entreprise",
+        "fields": {
+          "raisonSociale" : "LORILLARD - Chartres (28)",
+          "adresse" :"1 Av. Gustave Eiffel, 28000 Chartres",
+          "secteurDactivite" : "Electronique",
+          "description" :"Une entreprise de meuble" ,
+          "siret" :"48453434247563" ,
+          "libelleCPNE" : "CPNE des meubles",
+          "codeIDCC" : "1544",
+          "conventionCollective" : "CC des industries de meubles",
+          "codeNAF" : "74563Z",
+          "telephone" : "0102030405",
+          "email" : "lorillard@lorillard.fr",
+          "nombreSalarie" :1500
+        }
+  },{
+    "model": "api.Entreprise",
+        "fields": {
+          "raisonSociale" : "THALES SIX - Elancourt (78)",
+          "adresse" :"2 Av. Gay Lussac, 78990 Élancourt",
+          "secteurDactivite" : "Electronique",
+          "description" :"Une entreprise d'Electronique" ,
+          "siret" :"487645276457" ,
+          "libelleCPNE" : "CPNE des armes",
+          "codeIDCC" : "6452",
+          "conventionCollective" : "CC des industries d'armements du Maine-et-Loire",
+          "codeNAF" : "38274Z",
+          "telephone" : "0102030405",
+          "email" : "thales@thales.fr",
+          "nombreSalarie" :15000
+        }
+  }
+]

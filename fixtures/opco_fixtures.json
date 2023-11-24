@@ -1,0 +1,21 @@
+[
+  {
+    "model": "api.Opco",
+        "fields": {
+            "raisonSociale" : "OPCO 2I",
+            "adresse": "23 Rue Balzac, 75008 Paris",
+            "siret" : "0102030405",
+            "email" : "responsable@opco2i.fr",
+            "telephone":"0102030405"
+        }
+  },{
+    "model": "api.Opco",
+        "fields": {
+            "raisonSociale" : "OCAPIAT",
+            "adresse": "128 rue de la Boétie, Lotissement 41, 75008 Paris",
+            "siret" : "0102030405",
+            "email" : "responsable@ocapiat.fr",
+            "telephone":"0102030405"
+        }
+  }
+]

@@ -48,6 +48,7 @@ class Utilisateur(AbstractBaseUser, PermissionsMixin):
     id = models.AutoField(primary_key=True)
     nom = models.CharField(max_length=255)
     prenom = models.CharField(max_length=255)
+    telephone = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
     roles = models.ManyToManyField(Role)
     is_active = models.BooleanField(default=True)
@@ -70,29 +71,85 @@ class CoordinatriceAlternance(models.Model):
    id = models.AutoField(primary_key=True)
    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
+class Entreprise(models.Model):
+   id = models.AutoField(primary_key=True)
+   raisonSociale = models.CharField(max_length=255, default="N/A")
+   adresse = models.CharField(max_length=255, default="N/A")
+   secteurDactivite = models.CharField(max_length=255, default="N/A")
+   description = models.TextField(default="N/A")
+   siret = models.CharField(max_length=255, default="N/A")
+   libelleCPNE = models.CharField(max_length=255, default="N/A")
+   codeIDCC = models.CharField(max_length=255, default="N/A")
+   conventionCollective = models.CharField(max_length=255, default="N/A")
+   codeNAF = models.CharField(max_length=255, default="N/A")
+   telephone = models.CharField(max_length=255, default="N/A")
+   email = models.CharField(max_length=255, default="N/A")
+   nombreSalarie = models.IntegerField(default=0)
+
+class ResponsableEntreprise(models.Model):
+   id = models.AutoField(primary_key=True)
+   nom = models.CharField(max_length=255)
+   prenom = models.CharField(max_length=255)
+   telephone = models.CharField(max_length=255)
+   email = models.CharField(max_length=255)
+   fonction = models.CharField(max_length=255)
+   ancienEseo = models.BinaryField(default=False)
+   entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE)
+
+class Opco(models.Model):
+   id = models.AutoField(primary_key=True)
+   raisonSociale = models.CharField(max_length=255, default="N/A")
+   adresse = models.CharField(max_length=255, default="N/A")
+   siret = models.CharField(max_length=255, default="N/A")
+   telephone = models.CharField(max_length=255, default="N/A")
+   email = models.CharField(max_length=255, default="N/A")
+
 class MaitreAlternance(models.Model):
    id = models.AutoField(primary_key=True)
    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   fonction = models.CharField(max_length=255, default="N/A")
+   dernierDiplome = models.CharField(max_length=255, default="N/A")
+   ancienEseo = models.BinaryField(default=False)
+   entreprise = models.ForeignKey(Entreprise, blank=True, null=True, on_delete= models.SET_NULL)
 
 class Promotion(models.Model):
    id = models.AutoField(primary_key=True)
    libelle = models.CharField(max_length=255)
    semestre = models.CharField( max_length=3, choices=SemestreEnum.choices, default=SemestreEnum.S5)
 
+class GrilleEvaluation(models.Model):
+   id = models.AutoField(primary_key=True)
+
 class Apprenti(models.Model):
    id = models.AutoField(primary_key=True)
    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
-   tuteurPedagogique = models.ForeignKey(TuteurPedagogique, on_delete=models.CASCADE)
-   maitreAlternance = models.ForeignKey(MaitreAlternance, on_delete=models.CASCADE)
+   tuteurPedagogique = models.ForeignKey(TuteurPedagogique,  blank=True, null=True, on_delete= models.SET_NULL)
+   maitreAlternance = models.ForeignKey(MaitreAlternance,  blank=True, null=True, on_delete= models.SET_NULL)
    optionMajeure = models.CharField(max_length=255, default="N/A")
    optionMineure = models.CharField(max_length=255, default="N/A")
-   promotion = models.ForeignKey(Promotion, on_delete=models.CASCADE)
+   promotion = models.ForeignKey(Promotion, blank=True, null=True, on_delete= models.SET_NULL)
+   intitulePoste = models.CharField(max_length=255, default="N/A")
+   descriptifPoste = models.TextField(default="N/A")
+   classificationConventionCollective = models.CharField(max_length=255, default="N/A")
+   dureeHebdoContrat = models.IntegerField(default=35)
+   entreprise = models.ForeignKey(Entreprise, blank=True, null=True, on_delete= models.SET_NULL)
+   opco = models.ForeignKey(Opco, blank=True, null=True, on_delete= models.SET_NULL)
+   grilleEvaluation = models.ForeignKey(GrilleEvaluation, blank=True, null=True, on_delete= models.SET_NULL)
 
+class TypeTagEnum(models.TextChoices):
+    LIVRABLE = 'Livrable', 'Livrable'
+    NOTE = 'Note', 'Note'
+    AUTRE = 'Autre', 'Autre'
+
+class Tag(models.Model):
+    id = models.AutoField(primary_key=True)
+    libelle = models.CharField(max_length=255, default="N/A")
+    models.CharField(max_length=10, choices=TypeTagEnum.choices, default=TypeTagEnum.AUTRE)
 
 class Message(models.Model):
     id = models.AutoField(primary_key=True)
-    titre = models.TextField()
-    contenu = models.TextField()
+    titre = models.CharField(max_length=255,default="N/A")
+    contenu = models.TextField(default="N/A")
     date = models.DateField(default = date.today)
     time = models.TimeField(default = datetime.now())
     createur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, related_name='createur_message')
@@ -102,4 +159,18 @@ class Depot(models.Model):
     id = models.AutoField(primary_key=True)
     message = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
     echeance = models.DateField(default=date.today)
-    chemin_fichier = models.CharField(max_length=255)
+    cheminFichier = models.CharField(max_length=255)
+
+class Evenement(models.Model):
+    id = models.AutoField(primary_key=True)
+    libelle =models.CharField(max_length=255 , default="N/A")
+    dateDebut = models.DateField(default=date.today)
+    dateFin = models.DateField(default=date.today)
+    description = models.TextField(default="N/A")
+    apprenti = models.ForeignKey(Apprenti, on_delete=models.CASCADE)
+
+class EntretienSemestriel(models.Model):
+   id = models.AutoField(primary_key=True)
+   evenement = models.ForeignKey(Evenement, on_delete=models.CASCADE)
+   tuteurPedagogique = models.ForeignKey(TuteurPedagogique, blank=True, null=True, on_delete= models.SET_NULL)
+   maitreApprentissage = models.ForeignKey(MaitreAlternance, blank=True, null=True, on_delete= models.SET_NULL)
