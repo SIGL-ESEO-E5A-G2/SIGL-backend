@@ -1,0 +1,10 @@
+[
+  {
+    "model": "api.EntretienSemestriel",
+          "fields": {
+            "evenement_id" :1,
+            "tuteurPedagogique_id" :1,
+            "maitreAlternance_id" :1
+          }
+  }
+]

@@ -158,7 +158,7 @@ class Message(models.Model):
 
 class Depot(models.Model):
     id = models.AutoField(primary_key=True)
-    message = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+    message = models.ForeignKey(Message, on_delete=models.CASCADE)
     echeance = models.DateField(default=date.today)
     cheminFichier = models.CharField(max_length=255)
 
@@ -174,4 +174,4 @@ class EntretienSemestriel(models.Model):
    id = models.AutoField(primary_key=True)
    evenement = models.ForeignKey(Evenement, on_delete=models.CASCADE)
    tuteurPedagogique = models.ForeignKey(TuteurPedagogique, blank=True, null=True, on_delete= models.SET_NULL)
-   maitreApprentissage = models.ForeignKey(MaitreAlternance, blank=True, null=True, on_delete= models.SET_NULL)
+   maitreAlternance = models.ForeignKey(MaitreAlternance, blank=True, null=True, on_delete= models.SET_NULL)

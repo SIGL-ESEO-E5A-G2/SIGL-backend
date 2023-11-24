@@ -1,0 +1,21 @@
+[
+  {
+    "model": "api.Evenement",
+        "fields": {
+          "libelle" : "Entretien S5",
+          "dateDebut" :"2023-11-14",
+          "dateFin" : "2023-11-24",
+          "description" :"Entretien S5 est important au début" ,
+          "apprenti_id" :1
+        }
+  },{
+    "model": "api.Evenement",
+        "fields": {
+          "libelle" : "Soutenance S7",
+          "dateDebut" :"2023-11-14",
+          "dateFin" : "2023-11-24",
+          "description" :"Soutenance scientifique et technique",
+          "apprenti_id" :2
+        }
+  }
+]

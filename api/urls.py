@@ -60,6 +60,14 @@ router.register('depot', DepotViewSet, basename='depot')
 router.register('depotdetail', DepotDetailViewSet, basename='depotdetail')
 router.register('promotion', PromotionViewSet, basename='promotion')
 router.register('apprentipromotion', ApprentiPromotionViewSet, basename='apprentipromotion')
+router.register('entreprise', EntrepriseViewSet, basename='entreprise')
+router.register('responsableentreprise', ResponsableEntrepriseViewSet, basename='responsableentreprise')
+router.register('responsableentreprisedetail', ResponsableEntrepriseDetailViewSet, basename='responsableentreprisedetail')
+router.register('tag', TagViewSet, basename='tag')
+router.register('opco', OpcoViewSet, basename='opco')
+router.register('evenement', EvenementViewSet, basename='evenement')
+router.register('entretiensemestriel', EntretienSemestrielViewSet, basename='entretiensemestriel')
+router.register('entretiensemestrieldetail', EntretienSemestrielDetailViewSet, basename='entretiensemestrieldetail')
 
 urlpatterns = [
    path('', include(router.urls)),
