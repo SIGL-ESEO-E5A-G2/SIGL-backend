@@ -87,33 +87,33 @@ WSGI_APPLICATION = 'sigl_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'bdd-sigl-int',
-#         'USER': 'administrateur',
-#         'PASSWORD': 'DTK5CUWiWaqdTQEU0ngjuIQL57yive1GlZE991L',
-#         'HOST': '10.0.0.22',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-#         }
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'testdb',
-        'USER': 'root',
-        'PASSWORD': 'superpassword',
-        'HOST': 'host.docker.internal',
+        'NAME': 'bdd-sigl-int',
+        'USER': 'administrateur',
+        'PASSWORD': 'DTK5CUWiWaqdTQEU0ngjuIQL57yive1GlZE991L',
+        'HOST': '10.0.0.22',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'testdb',
+#         'USER': 'root',
+#         'PASSWORD': 'superpassword',
+#         'HOST': 'host.docker.internal',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#         }
+#     }
+# }
 
 
 # Password validation
