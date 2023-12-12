@@ -12,3 +12,4 @@ drf-yasg==1.21.7
 pylint == 3.0.2
 PyJWT == 2.1.0
 djangorestframework_simplejwt == 5.3.0
+azure-storage-blob == 12.19.0

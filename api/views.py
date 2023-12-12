@@ -3,7 +3,7 @@ from rest_framework.viewsets import ModelViewSet, ReadOnlyModelViewSet
 from rest_framework.permissions import IsAuthenticated
 
 from api.serializers import *
-
+from django.conf import settings
 from api.models import *
 
 from rest_framework.authtoken.views import ObtainAuthToken
@@ -11,8 +11,13 @@ from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework import status
 from django.core import serializers as core_serializers
+from django.http import HttpResponseBadRequest, HttpResponse
 from rest_framework.views import APIView
 import jwt, datetime
+
+from django.views.decorators.csrf import csrf_exempt
+
+from azure.storage.blob import BlobServiceClient
 
 # =================== EXEMPLE =======================
 # class PersonViewSet(viewsets.ModelViewSet):
@@ -211,3 +216,61 @@ class EntretienSemestrielDetailViewSet(ReadOnlyModelViewSet):
     def get_queryset(self):
         return EntretienSemestriel.objects.all()
 
+# views.py
+@csrf_exempt
+def upload_pdf_to_azure(request):
+    if request.method == 'POST' and request.FILES.get('pdf_file') and request.POST['file_path']:
+        pdf_file = request.FILES['pdf_file']
+        path = request.POST['file_path']
+        print(request.POST['file_path'])
+        # Connexion au compte Azure Storage Blob
+        blob_service_client = BlobServiceClient(account_url=f"https://{settings.AZURE_ACCOUNT_NAME}.blob.core.windows.net", credential=settings.AZURE_ACCOUNT_KEY)
+        container_client = blob_service_client.get_container_client(settings.AZURE_CONTAINER)
+
+        # Enregistrement du fichier PDF dans le blob storage Azure
+        blob_client = container_client.upload_blob(name=path+pdf_file.name, data=pdf_file.read(), overwrite=True)
+
+        # Vous pouvez maintenant retourner une réponse ou effectuer d'autres actions nécessaires
+        return HttpResponse("Fichier PDF téléchargé avec succès.")
+
+    return HttpResponseBadRequest("Erreur lors du téléchargement du fichier PDF.")
+
+
+# views.py
+import json
+from urllib.parse import unquote  # Import unquote
+@csrf_exempt
+def get_pdf_from_azure(request):
+    try:
+        # Obtenir le corps de la requête
+        body = json.loads(request.body.decode('utf-8'))
+
+        # Obtenir le chemin du fichier à partir du corps de la requête
+        file_path = body.get('file_path', '')
+
+        if not file_path:
+            return HttpResponseBadRequest("Le paramètre 'file_path' est requis dans le corps de la requête.")
+
+        # Décodez le chemin si nécessaire (peut être nécessaire pour les caractères spéciaux)
+        file_path = unquote(file_path)
+
+        # Connexion au compte Azure Storage Blob
+        blob_service_client = BlobServiceClient(account_url=f"https://{settings.AZURE_ACCOUNT_NAME}.blob.core.windows.net", credential=settings.AZURE_ACCOUNT_KEY)
+        container_client = blob_service_client.get_container_client(settings.AZURE_CONTAINER)
+
+        # Vérifier si le fichier existe dans le blob storage Azure
+        blob_client = container_client.get_blob_client(blob=file_path)
+        if blob_client.exists():
+            # Récupérer le contenu du fichier PDF
+            blob_data = blob_client.download_blob()
+            pdf_content = blob_data.read()
+
+            # Configurer la réponse HTTP pour le fichier PDF
+            response = HttpResponse(pdf_content, content_type='application/pdf')
+            response['Content-Disposition'] = f'inline; filename="{file_path}"'
+            return response
+        else:
+            # Retourner une réponse 404 si le fichier n'existe pas
+            return HttpResponseNotFound("Fichier PDF non trouvé.")
+    except json.JSONDecodeError:
+        return HttpResponseBadRequest("Le corps de la requête doit être au format JSON.")
