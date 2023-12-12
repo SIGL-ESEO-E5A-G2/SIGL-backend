@@ -196,5 +196,5 @@ SIMPLE_JWT={
 }
 
 AZURE_ACCOUNT_NAME = 'siglstorage'
-AZURE_ACCOUNT_KEY = 'ambJ6AE2qIPVoRqMMysxQu2Odw4WNCcpgJkvieEvJr2CmbBViuXX4hzSbP7C4JOJtnK5RhxgoUjV+AStcjA71Q=='
+AZURE_ACCOUNT_KEY = 'SECRET, demander à Nathan ou Mattéo"
 AZURE_CONTAINER = 'sigltest'
