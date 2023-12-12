@@ -195,3 +195,6 @@ SIMPLE_JWT={
     'USER_ID_FIELD': 'utilisateur_id'
 }
 
+AZURE_ACCOUNT_NAME = 'siglstorage'
+AZURE_ACCOUNT_KEY = 'ambJ6AE2qIPVoRqMMysxQu2Odw4WNCcpgJkvieEvJr2CmbBViuXX4hzSbP7C4JOJtnK5RhxgoUjV+AStcjA71Q=='
+AZURE_CONTAINER = 'sigltest'
