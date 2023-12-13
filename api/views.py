@@ -199,6 +199,18 @@ class ApprentiPromotionViewSet(ModelViewSet):
         except Exception as error :
             print(error)
             raise serializers.ValidationError({'promotion': 'Veuillez indiquer une promotion'})
+        
+class MessageUtilisateurViewSet(ModelViewSet):
+    serializer_class = MessageDetailSerializer
+    def get_queryset(self):
+        try :
+            utilisateur = self.request.query_params.get('utilisateur')
+            print(self.request.query_params)
+            return Message.objects.filter(destinataire = utilisateur)
+        except Exception as error :
+            print(error)
+            raise serializers.ValidationError({'utilisateur': 'Veuillez indiquer un utilisateur'})
+    
 
 
 class EvenementViewSet(ModelViewSet):
