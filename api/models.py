@@ -119,7 +119,28 @@ class Promotion(models.Model):
 
 class GrilleEvaluation(models.Model):
    id = models.AutoField(primary_key=True)
+   
+class Competence(models.Model):
+   id = models.AutoField(primary_key=True)
+   libelle = models.CharField(max_length=255)
+   description = models.TextField(default="N/A")
+   
+class EtatEvaluationEnum(models.TextChoices):
+    NON_ACQUIS = 'Non acquis', 'Non acquis'
+    EN_COURS = 'En cours d\'acquisition', 'En cours d\'acquisition'
+    ACQUIS = 'Acquis', 'Acquis'
+    NON_ABORDE = 'Non abordé en entreprise', 'Non abordé en entreprise'   
+    
+class CompetenceApprenti(models.Model):
+   id = models.AutoField(primary_key=True)
+   commentaire = models.CharField(max_length=255, default="N/A")
+   competence = models.ForeignKey(Competence, blank=True, null=True, on_delete= models.CASCADE)
+   grilleEvaluation = models.ForeignKey(GrilleEvaluation, blank=True, null=True, on_delete= models.CASCADE)
+   semestre = models.CharField( max_length=3, choices=SemestreEnum.choices, default=SemestreEnum.S5)
+   evaluation = models.CharField( max_length=24, choices=EtatEvaluationEnum.choices, default=EtatEvaluationEnum.NON_ACQUIS)
+   cible = models.CharField( max_length=24, choices=EtatEvaluationEnum.choices, default=EtatEvaluationEnum.NON_ACQUIS)
 
+   
 class Apprenti(models.Model):
    id = models.AutoField(primary_key=True)
    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
@@ -175,3 +196,4 @@ class EntretienSemestriel(models.Model):
    evenement = models.ForeignKey(Evenement, on_delete=models.CASCADE)
    tuteurPedagogique = models.ForeignKey(TuteurPedagogique, blank=True, null=True, on_delete= models.SET_NULL)
    maitreAlternance = models.ForeignKey(MaitreAlternance, blank=True, null=True, on_delete= models.SET_NULL)
+   

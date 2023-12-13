@@ -1,0 +1,1566 @@
+[
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":1,
+          "grilleEvaluation_id":1,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":1,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":1,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":1,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":1,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":1,
+          "grilleEvaluation_id":1,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":2,
+          "grilleEvaluation_id":1,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":1,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":1,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":1,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":1,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":1,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":3,
+          "grilleEvaluation_id":1,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":1,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":1,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":1,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":1,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":1,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":4,
+          "grilleEvaluation_id":1,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":1,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":1,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":1,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":1,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":1,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":5,
+          "grilleEvaluation_id":1,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":1,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":1,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":1,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":1,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":1,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":6,
+          "grilleEvaluation_id":1,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":1,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":1,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":1,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":1,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":1,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":7,
+          "grilleEvaluation_id":1,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":1,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":1,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":1,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":1,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":1,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":8,
+          "grilleEvaluation_id":1,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":1,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":1,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":1,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":1,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":1,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":1,
+          "grilleEvaluation_id":2,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":2,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":2,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":2,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":2,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":1,
+          "grilleEvaluation_id":2,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":2,
+          "grilleEvaluation_id":2,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":2,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":2,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":2,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":2,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":2,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":3,
+          "grilleEvaluation_id":2,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":2,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":2,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":2,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":2,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":2,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":4,
+          "grilleEvaluation_id":2,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":2,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":2,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":2,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":2,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":2,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":5,
+          "grilleEvaluation_id":2,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":2,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":2,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":2,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":2,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":2,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":6,
+          "grilleEvaluation_id":2,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":2,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":2,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":2,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":2,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":2,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":7,
+          "grilleEvaluation_id":2,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":2,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":2,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":2,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":2,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":2,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":8,
+          "grilleEvaluation_id":2,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":2,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":2,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":2,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":2,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":2,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":1,
+          "grilleEvaluation_id":3,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":3,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":3,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":3,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":1,
+          "grilleEvaluation_id":3,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":1,
+          "grilleEvaluation_id":3,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":2,
+          "grilleEvaluation_id":3,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":3,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":3,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":3,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":3,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":2,
+          "grilleEvaluation_id":3,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":3,
+          "grilleEvaluation_id":3,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":3,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":3,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":3,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":3,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":3,
+          "grilleEvaluation_id":3,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":4,
+          "grilleEvaluation_id":3,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":3,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":3,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":3,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":3,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":4,
+          "grilleEvaluation_id":3,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":5,
+          "grilleEvaluation_id":3,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":3,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":3,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":3,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":3,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":5,
+          "grilleEvaluation_id":3,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":6,
+          "grilleEvaluation_id":3,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":3,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":3,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":3,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":3,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":6,
+          "grilleEvaluation_id":3,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":7,
+          "grilleEvaluation_id":3,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":3,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":3,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":3,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":3,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":7,
+          "grilleEvaluation_id":3,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    },{
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"Bien",
+          "competence_id":8,
+          "grilleEvaluation_id":3,
+          "semestre":"S5",
+          "evaluation":"En cours d'acquisition",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":3,
+          "semestre":"S6",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":3,
+          "semestre":"S7",
+          "evaluation":"Non acquis",
+          "cible":"En cours d'acquisition"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":3,
+          "semestre":"S8",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":3,
+          "semestre":"S9",
+          "evaluation":"Non acquis",
+          "cible":"Non acquis"
+        }
+    },
+    {
+        "model": "api.CompetenceApprenti",
+        "fields": {
+          "commentaire":"N/A",
+          "competence_id":8,
+          "grilleEvaluation_id":3,
+          "semestre":"S10",
+          "evaluation":"Non acquis",
+          "cible":"Acquis"
+        }
+    }
+]

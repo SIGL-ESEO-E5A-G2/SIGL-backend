@@ -1,0 +1,58 @@
+[
+    {
+        "model": "api.Competence",
+        "fields": {
+          "libelle":"Diagnostiquer",
+          "description":"- Diagnostiquer un système numérique existant en vue de le faire évoluer\n- Diagnostiquer un système numérique pour identifier une anomalie\n- Diagnostiquer un système numérique en vue de corriger / pallier une anomalie\n- Diagnostiquer un système numérique en vue de le maintenir, durablement, en état de fonctionnement"
+        }
+    },
+    {
+        "model": "api.Competence",
+        "fields": {
+          "libelle":"Concevoir",
+          "description":"- Analyser et construire un cahier des charges\n- Concevoir l'architecture fonctionnelle et/ou structurelle d'un système numérique répondant au cahier des charges, en prenant en compte des contraintes de développement durable\n- Concevoir un système numérique en choisissant des technologies adaptées au besoin défini, compte-tenu de l'état de l'art, des moyens de l'entreprise et dans un souci de performance / efficacité, en prenant en compte des contraintes de développement durable\n- Concevoir des systèmes numériques à travers de la modélisation et de la simulation"         
+        }
+    },
+    {
+        "model": "api.Competence",
+        "fields": {
+          "libelle":"Produire",
+          "description":"- Produire un prototype de système numérique\n- Produire un sys.num capable de respecter des contraintes réglementaires, techniques, environnementales et de durée de vie"
+          }
+    },
+    {
+        "model": "api.Competence",
+        "fields": {
+          "libelle":"Valider",
+          "description":"- Valider le bon fonctionnement d'un système numérique en proposant une démarche visant à identifier l'absence de dysfonctionnement\n- Valider l'adéquation d'une solution avec le cahier des charges"
+          }
+    },
+    {
+        "model": "api.Competence",
+        "fields": {
+          "libelle":"Piloter",
+          "description":"- Piloter un projet en assurant la projection et le suivi des actions et du budget\n- Piloter un projet en manageant une équipe projet pluridisciplinaire et internationale, en prenant en compte les aspects techniques, humains et économiques"
+        }
+    },
+    {
+        "model": "api.Competence",
+        "fields": {
+          "libelle":"S'adapter (se former)",
+          "description":"- S'adapter à de nouvelles méthodes/techniques/technologies identifiées comme pouvant être utiles à concevoir des systèmes numériques\n- S'adapter à des contraintes organisationnelles, environnementales ou humaines\n- Anticiper les innovations et les évolutions, assurer une veille\n- Identifier la nécessité de se former sur de nouvelles méthodes, techniques ou technologies"
+          }
+    },
+    {
+        "model": "api.Competence",
+        "fields": {
+          "libelle":"Communiquer (Transmettre)",
+          "description":"- Communiquer avec des spécialistes comme avec des non-spécialistes en français et en anglais\n- Animer et convaincre"
+          }
+    },
+    {
+        "model": "api.Competence",
+        "fields": {
+          "libelle":"(à compléter, spécifique à l'entreprise et non requis au diplôme ESEO)",
+          "description":""
+        }
+    }
+]
