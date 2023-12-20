@@ -5,5 +5,25 @@
           "message":2,
           "cheminFichier": "/ici/la"
         }
+    },
+    {
+      "model": "api.Depot",
+      "fields": {
+        "message":3,
+        "cheminFichier": "/ici/la"
+      }
+  },
+    {
+      "model": "api.Depot",
+      "fields": {
+        "message":4,
+        "cheminFichier": "/ici/la"
+      }
+  },{
+    "model": "api.Depot",
+    "fields": {
+      "message":5,
+      "cheminFichier": "/ici/la"
     }
+  }
 ]
