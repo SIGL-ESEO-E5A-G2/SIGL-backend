@@ -10,7 +10,7 @@ COPY requirements.txt /app/sigl_api
 RUN apk update
 RUN apk add git
 RUN git init
-RUN apk add --virtual .build-deps --no-cache gcc python3-dev musl-dev mariadb-connector-c-dev
+RUN apk add --virtual .build-deps --no-cache gcc python3-dev musl-dev mariadb-connector-c-dev libffi-dev
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN  python3 get-pip.py
 RUN rm get-pip.py

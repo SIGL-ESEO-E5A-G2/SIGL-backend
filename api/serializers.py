@@ -200,3 +200,24 @@ class EntretienSemestrielSerializer(serializers.ModelSerializer):
         model = EntretienSemestriel
         fields = '__all__'
 
+
+class GrilleEvaluationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GrilleEvaluation
+        fields = '__all__'
+        
+class CompetenceApprentiSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CompetenceApprenti
+        fields = '__all__'
+        
+class CompetenceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Competence
+        fields = '__all__'
+
+class CompetenceApprentiDetailSerializer(serializers.ModelSerializer):
+    competence = CompetenceSerializer(many=False)
+    class Meta:
+        model = CompetenceApprenti
+        fields = '__all__'

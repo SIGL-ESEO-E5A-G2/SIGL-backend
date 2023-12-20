@@ -13,7 +13,8 @@
             "classificationConventionCollective" : "Coef TGA 255",
             "dureeHebdoContrat" : 35,
             "entreprise_id": 1,
-            "opco_id": 1
+            "opco_id": 1,
+            "grilleEvaluation_id":1
         }
     },
     {
@@ -30,7 +31,8 @@
             "classificationConventionCollective" : "Coef TGA 255",
             "dureeHebdoContrat" : 35,
             "entreprise_id": 2,
-            "opco_id": 1
+            "opco_id": 1,
+            "grilleEvaluation_id":2
         }
     },
     {
@@ -47,7 +49,8 @@
             "classificationConventionCollective" : "Coef TGA 255",
             "dureeHebdoContrat" : 35,
             "entreprise_id": 3,
-            "opco_id": 2
+            "opco_id": 2,
+            "grilleEvaluation_id":3
         }
     }
 ]

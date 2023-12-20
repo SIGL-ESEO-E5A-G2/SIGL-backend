@@ -3,3 +3,4 @@ code/
 .coverage
 api/__pycache__/
 sigl_api/__pycache__/
+sigl_api/config.py

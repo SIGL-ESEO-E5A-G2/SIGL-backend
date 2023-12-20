@@ -1,0 +1,20 @@
+[
+    {
+        "model": "api.GrilleEvaluation",
+        "fields": {
+          "id":1
+        }
+    },
+    {
+        "model": "api.GrilleEvaluation",
+        "fields": {
+          "id":2
+        }
+    },
+    {
+        "model": "api.GrilleEvaluation",
+        "fields": {
+          "id":3
+        }
+    }
+]
