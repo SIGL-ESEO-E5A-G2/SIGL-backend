@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+from sigl_api import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -195,6 +196,8 @@ SIMPLE_JWT={
     'USER_ID_FIELD': 'utilisateur_id'
 }
 
+
 AZURE_ACCOUNT_NAME = 'siglstorage'
-AZURE_ACCOUNT_KEY = 'ambJ6AE2qIPVoRqMMysxQu2Odw4WNCcpgJkvieEvJr2CmbBViuXX4hzSbP7C4JOJtnK5RhxgoUjV+AStcjA71Q=='
+AZURE_ACCOUNT_KEY = 'demanderamatteoounathan'
 AZURE_CONTAINER = 'sigltest'
+
