@@ -57,10 +57,12 @@ router.register('administrateur', AdministrateurViewSet, basename='administrateu
 router.register('message', MessageViewSet, basename='message')
 router.register('messagedetail', MessageDetailViewSet, basename='messagedetail')
 router.register('messageutilisateurdetail', MessageUtilisateurViewSet, basename='messageutilisateurdetail')
+
 router.register('depot', DepotViewSet, basename='depot')
 router.register('depotdetail', DepotDetailViewSet, basename='depotdetail')
 router.register('promotion', PromotionViewSet, basename='promotion')
 router.register('apprentipromotion', ApprentiPromotionViewSet, basename='apprentipromotion')
+router.register('apprentiutilisateurdetail', ApprentiUtilisateurViewSet, basename='apprentiutilisateurdetail')
 router.register('entreprise', EntrepriseViewSet, basename='entreprise')
 router.register('responsableentreprise', ResponsableEntrepriseViewSet, basename='responsableentreprise')
 router.register('responsableentreprisedetail', ResponsableEntrepriseDetailViewSet, basename='responsableentreprisedetail')

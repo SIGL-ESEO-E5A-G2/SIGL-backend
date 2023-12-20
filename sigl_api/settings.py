@@ -196,6 +196,8 @@ SIMPLE_JWT={
     'USER_ID_FIELD': 'utilisateur_id'
 }
 
-AZURE_ACCOUNT_NAME = config.AZURE_ACCOUNT_NAME
-AZURE_ACCOUNT_KEY = config.AZURE_ACCOUNT_KEY
-AZURE_CONTAINER = config.AZURE_CONTAINER
+
+AZURE_ACCOUNT_NAME = 'siglstorage'
+AZURE_ACCOUNT_KEY = 'demanderamatteoounathan'
+AZURE_CONTAINER = 'sigltest'
+
