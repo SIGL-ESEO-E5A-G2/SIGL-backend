@@ -8,7 +8,7 @@ python ../manage.py loaddata utilisateur_fixtures.json \
                              tuteur_fixtures.json \
                              coordinatriceAlternance_fixtures.json \
                              maitreAlternance_fixtures.json \
-                             grilleDevaluation_fixtures.json \ 
+                             grilleDevaluation_fixtures.json \
                              apprenti_fixtures.json \
                              tag_fixtures.json \
                              message_fixtures.json \
