@@ -73,6 +73,7 @@ router.register('entretiensemestriel', EntretienSemestrielViewSet, basename='ent
 router.register('entretiensemestrieldetail', EntretienSemestrielDetailViewSet, basename='entretiensemestrieldetail')
 
 router.register('grilleevaluation', GrilleEvaluationViewSet, basename='grilleevaluation')
+router.register('competenceapprenti', CompetenceApprentiViewSet, basename='competenceapprenti')
 
 urlpatterns = [
    path('', include(router.urls)),

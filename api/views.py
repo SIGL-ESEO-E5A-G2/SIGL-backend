@@ -315,3 +315,8 @@ class GrilleEvaluationViewSet(viewsets.ModelViewSet):
     #     except Http404:
     #         pass
     #     return Response(status=status.HTTP_204_NO_CONTENT)
+    
+class CompetenceApprentiViewSet(viewsets.ModelViewSet):
+    serializer_class = CompetenceApprentiSerializer
+    def get_queryset(self):
+        return CompetenceApprenti.objects.all()
