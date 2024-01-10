@@ -47,5 +47,12 @@
           "libelle": "Info",
           "type" : "Autre"
         }
+  },
+  {
+    "model": "api.Tag",
+        "fields": {
+          "libelle": "Déposé",
+          "type" : "Autre"
+        }
   }
 ]
