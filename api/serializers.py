@@ -2,6 +2,7 @@ from rest_framework import serializers
 from api.models import *
 from django.contrib.auth import authenticate
 from rest_framework.exceptions import AuthenticationFailed
+from rest_framework.response import Response
 
 # =================== EXEMPLE =======================
 # class PersonSerializer(serializers.ModelSerializer):
@@ -200,11 +201,55 @@ class EntretienSemestrielSerializer(serializers.ModelSerializer):
         model = EntretienSemestriel
         fields = '__all__'
 
+from django.shortcuts import get_object_or_404
+from rest_framework import status
 
 class GrilleEvaluationSerializer(serializers.ModelSerializer):
     class Meta:
         model = GrilleEvaluation
         fields = '__all__'
+    
+    def create(self, validated_data):
+        
+        id_apprenti = self.context['request'].data.get('id_apprenti', None)
+        apprenti = get_object_or_404(Apprenti, id=id_apprenti)
+        if apprenti.grilleEvaluation != None :
+            return apprenti.grilleEvaluation
+        
+        grille_evaluation = GrilleEvaluation.objects.create(**validated_data)
+        
+        apprenti.grilleEvaluation = grille_evaluation
+        apprenti.save()
+        # Crée 6 compétences apprentis pour chaque compétence existante
+        competences_existantes = Competence.objects.all()
+        semestre = ['S5','S6','S7','S8','S9','S10']
+        
+        for competence in competences_existantes:
+            i = 0
+            for _ in range(6):
+                CompetenceApprenti.objects.create(
+                    grilleEvaluation=grille_evaluation,
+                    competence=competence,
+                    semestre=semestre[i]
+                )
+                i += 1
+
+        return grille_evaluation
+    
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        competences_existantes = Competence.objects.all()
+        i = 0
+        for competence in competences_existantes:
+            i+=1
+            competences_apprentis = CompetenceApprenti.objects.filter(grilleEvaluation=instance, competence= competence)
+            representation[f'competence_{i}'] = CompetenceSerializer(competence, many=False).data
+            representation[f'competenceApprenti_{i}'] = CompetenceApprentiSerializer(competences_apprentis, many=True).data
+        # Ajoute des informations supplémentaires si nécessaire
+        representation['custom_field'] = 'Valeur personnalisée'
+
+        return representation
+
         
 class CompetenceApprentiSerializer(serializers.ModelSerializer):
     class Meta:

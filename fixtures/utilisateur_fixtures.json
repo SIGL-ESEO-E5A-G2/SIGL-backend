@@ -115,7 +115,7 @@
           "prenom": "Coraline",
           "email": "coraline.chollet@eseo.fr",
           "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$13WM0icb6RfGcbmMqB/cp62K/PAOUequCTF5RUgq/xI=",
-          "roles":[3],
+          "roles":[3,4],
           "telephone": "0102030405"
         }
     },
