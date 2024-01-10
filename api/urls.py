@@ -72,6 +72,8 @@ router.register('evenement', EvenementViewSet, basename='evenement')
 router.register('entretiensemestriel', EntretienSemestrielViewSet, basename='entretiensemestriel')
 router.register('entretiensemestrieldetail', EntretienSemestrielDetailViewSet, basename='entretiensemestrieldetail')
 
+router.register('grilleevaluation', GrilleEvaluationViewSet, basename='grilleevaluation')
+
 urlpatterns = [
    path('', include(router.urls)),
    path('authentification/', AuthentificationUtilisateurView.as_view(), name='authentification'),

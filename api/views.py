@@ -297,3 +297,21 @@ def get_pdf_from_azure(request):
             return HttpResponseNotFound("Fichier PDF non trouvé.")
     except json.JSONDecodeError:
         return HttpResponseBadRequest("Le corps de la requête doit être au format JSON.")
+
+from django.http import Http404
+
+class GrilleEvaluationViewSet(viewsets.ModelViewSet):
+    serializer_class = GrilleEvaluationSerializer
+    def get_queryset(self):
+        return GrilleEvaluation.objects.all()
+    
+    # def perform_destroy(self, instance): 
+    #     try:
+    #          # Supprime la grille d'évaluation et toutes les compétences apprentis associées
+    #         competences_apprentis = CompetenceApprenti.objects.filter(grilleEvaluation=instance)
+    #         competences_apprentis.delete()
+
+    #         instance.delete()
+    #     except Http404:
+    #         pass
+    #     return Response(status=status.HTTP_204_NO_CONTENT)
