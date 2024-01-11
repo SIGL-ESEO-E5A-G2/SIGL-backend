@@ -56,6 +56,7 @@ router.register('coordinatricealternancedetail', CoordinatriceAlternanceDetailVi
 router.register('administrateur', AdministrateurViewSet, basename='administrateur')
 router.register('message', MessageViewSet, basename='message')
 router.register('messagedetail', MessageDetailViewSet, basename='messagedetail')
+router.register('messagefeed', MessageFeedViewSet, basename='messagefeed')
 router.register('messageutilisateurdetail', MessageUtilisateurViewSet, basename='messageutilisateurdetail')
 
 router.register('depot', DepotViewSet, basename='depot')

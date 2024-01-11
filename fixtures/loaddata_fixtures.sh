@@ -16,4 +16,5 @@ python ../manage.py loaddata utilisateur_fixtures.json \
                              evenement_fixtures.json \
                              entretienSemestriel_fixtures.json \
                              competence_fixtures.json \
-                             competenceApprenti_fixtures.json
+                             competenceApprenti_fixtures.json \
+                             commentaire_fixtures.json

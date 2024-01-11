@@ -148,6 +148,32 @@ class ApprentiSerializer(serializers.ModelSerializer):
 
 # --- Apprenti ---
 
+class MessageFeedSerializer(serializers.ModelSerializer):
+    tags = TagSerializer(many=True)
+    class Meta:
+        model = Message
+        fields = '__all__'
+        
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        
+        createur = Utilisateur.objects.get(email=instance.createur)
+        representation['createur'] = f'{createur.nom} {createur.prenom}'
+        del representation['destinataire']
+        try :
+            depot = Depot.objects.get(message = instance)
+            representation['depot'] = DepotSerializer(depot, many = False).data
+        except :
+            pass
+        
+        return representation
+
+
+class MessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Message
+        fields = '__all__'
+        
 class MessageDetailSerializer(serializers.ModelSerializer):
     createur = UtilisateurSerializer(many=False)
     destinataire = UtilisateurSerializer(many=True)
@@ -155,13 +181,7 @@ class MessageDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Message
         fields = '__all__'
-
-
-class MessageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Message
-        fields = '__all__'
-
+        
 class DepotDetailSerializer(serializers.ModelSerializer):
     message = MessageDetailSerializer(many=False)
 
