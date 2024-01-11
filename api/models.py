@@ -196,6 +196,7 @@ class EntretienSemestriel(models.Model):
    evenement = models.ForeignKey(Evenement, on_delete=models.CASCADE)
    tuteurPedagogique = models.ForeignKey(TuteurPedagogique, blank=True, null=True, on_delete= models.SET_NULL)
    maitreAlternance = models.ForeignKey(MaitreAlternance, blank=True, null=True, on_delete= models.SET_NULL)
+   noteSemestre = models.IntegerField(default=-1)
    
 class Commentaire(models.Model):
    id = models.AutoField(primary_key=True)
