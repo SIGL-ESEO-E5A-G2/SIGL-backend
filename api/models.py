@@ -197,3 +197,12 @@ class EntretienSemestriel(models.Model):
    tuteurPedagogique = models.ForeignKey(TuteurPedagogique, blank=True, null=True, on_delete= models.SET_NULL)
    maitreAlternance = models.ForeignKey(MaitreAlternance, blank=True, null=True, on_delete= models.SET_NULL)
    
+class Commentaire(models.Model):
+   id = models.AutoField(primary_key=True)
+   contenu = models.TextField(default="N/A")
+   date = models.DateField(default = date.today)
+   time = models.TimeField(default = datetime.now())
+   createur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, related_name='createur_commentaire')
+   message = models.ForeignKey(Message, on_delete=models.CASCADE)
+
+   
