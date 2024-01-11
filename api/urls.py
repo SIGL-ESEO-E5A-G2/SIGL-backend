@@ -74,6 +74,8 @@ router.register('entretiensemestrieldetail', EntretienSemestrielDetailViewSet, b
 
 router.register('grilleevaluation', GrilleEvaluationViewSet, basename='grilleevaluation')
 router.register('competenceapprenti', CompetenceApprentiViewSet, basename='competenceapprenti')
+router.register('commentaire', CommentaireViewSet, basename='commentaire')
+
 
 urlpatterns = [
    path('', include(router.urls)),

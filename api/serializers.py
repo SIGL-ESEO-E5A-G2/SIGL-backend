@@ -245,8 +245,6 @@ class GrilleEvaluationSerializer(serializers.ModelSerializer):
             competences_apprentis = CompetenceApprenti.objects.filter(grilleEvaluation=instance, competence= competence)
             representation[f'competence_{i}'] = CompetenceSerializer(competence, many=False).data
             representation[f'competenceApprenti_{i}'] = CompetenceApprentiSerializer(competences_apprentis, many=True).data
-        # Ajoute des informations supplémentaires si nécessaire
-        representation['custom_field'] = 'Valeur personnalisée'
 
         return representation
 
@@ -265,4 +263,15 @@ class CompetenceApprentiDetailSerializer(serializers.ModelSerializer):
     competence = CompetenceSerializer(many=False)
     class Meta:
         model = CompetenceApprenti
+        fields = '__all__'
+
+class CommentaireSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Commentaire
+        fields = '__all__'
+        
+class CommentaireDetailSerializer(serializers.ModelSerializer):
+    createur = UtilisateurSerializer
+    class Meta:
+        model = Commentaire
         fields = '__all__'
