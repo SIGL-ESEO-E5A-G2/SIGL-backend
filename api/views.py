@@ -150,6 +150,12 @@ class MessageDetailViewSet(ReadOnlyModelViewSet):
 
     def get_queryset(self):
         return Message.objects.all()
+    
+class MessageFeedViewSet(ReadOnlyModelViewSet):
+    serializer_class = MessageFeedSerializer
+
+    def get_queryset(self):
+        return Message.objects.all()
 
 class DepotViewSet(ModelViewSet):
     serializer_class = DepotSerializer
@@ -322,3 +328,13 @@ class CompetenceApprentiViewSet(viewsets.ModelViewSet):
     serializer_class = CompetenceApprentiSerializer
     def get_queryset(self):
         return CompetenceApprenti.objects.all()
+    
+class CommentaireViewSet(ModelViewSet):
+    serializer_class = CommentaireSerializer
+    def get_queryset(self):
+        return  Commentaire.objects.all()
+
+class  CommentaireDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = CommentaireDetailSerializer
+    def get_queryset(self):
+        return Commentaire.objects.all()
