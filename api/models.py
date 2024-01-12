@@ -182,7 +182,7 @@ class Depot(models.Model):
     id = models.AutoField(primary_key=True)
     message = models.ForeignKey(Message, on_delete=models.CASCADE)
     echeance = models.DateField(default=date.today)
-    dateLivraison = models.DateField(default=date.today)
+    dateLivraison = models.DateField(default=date.today, blank=True, null=True)
     cheminFichier = models.CharField(max_length=255)
 
 class Evenement(models.Model):
