@@ -166,6 +166,16 @@ class MessageFeedSerializer(serializers.ModelSerializer):
         except :
             pass
         
+        try :
+            all_commentaire = Commentaire.objects.filter(message = instance)
+            commentaire_list = []
+            for commentaire in all_commentaire :
+                commentaire_list.append(CommentaireDetailSerializer(commentaire, many = False).data)
+            
+            representation['commentaire'] = commentaire_list
+        except :
+            pass
+        
         return representation
 
 
@@ -291,7 +301,7 @@ class CommentaireSerializer(serializers.ModelSerializer):
         fields = '__all__'
         
 class CommentaireDetailSerializer(serializers.ModelSerializer):
-    createur = UtilisateurSerializer
+    createur = UtilisateurSerializer(many=False)
     class Meta:
         model = Commentaire
         fields = '__all__'
