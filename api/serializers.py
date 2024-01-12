@@ -171,7 +171,7 @@ class MessageFeedSerializer(serializers.ModelSerializer):
             commentaire_list = []
             for commentaire in all_commentaire :
                 commentaire_list.append(CommentaireDetailSerializer(commentaire, many = False).data)
-            
+                
             representation['commentaire'] = commentaire_list
         except :
             pass
@@ -301,7 +301,12 @@ class CommentaireSerializer(serializers.ModelSerializer):
         fields = '__all__'
         
 class CommentaireDetailSerializer(serializers.ModelSerializer):
-    createur = UtilisateurSerializer(many=False)
     class Meta:
         model = Commentaire
         fields = '__all__'
+    
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        createur = Utilisateur.objects.get(email=instance.createur)
+        representation['createur']=f'{createur.nom} {createur.prenom}'
+        return representation
