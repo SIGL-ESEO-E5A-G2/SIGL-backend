@@ -57,6 +57,7 @@ router.register('administrateur', AdministrateurViewSet, basename='administrateu
 router.register('message', MessageViewSet, basename='message')
 router.register('messagedetail', MessageDetailViewSet, basename='messagedetail')
 router.register('messagefeed', MessageFeedViewSet, basename='messagefeed')
+router.register('messageutilisateurfeed', MessageUtilisateurFeedViewSet, basename='messageutilisateurfeed')
 router.register('messageutilisateurdetail', MessageUtilisateurViewSet, basename='messageutilisateurdetail')
 
 router.register('depot', DepotViewSet, basename='depot')

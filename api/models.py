@@ -165,6 +165,7 @@ class TypeTagEnum(models.TextChoices):
 class Tag(models.Model):
     id = models.AutoField(primary_key=True)
     libelle = models.CharField(max_length=255, default="N/A")
+    couleur = models.CharField(max_length=255, default="000000")
     type = models.CharField(max_length=10, choices=TypeTagEnum.choices, default=TypeTagEnum.AUTRE)
 
 class Message(models.Model):
@@ -181,6 +182,7 @@ class Depot(models.Model):
     id = models.AutoField(primary_key=True)
     message = models.ForeignKey(Message, on_delete=models.CASCADE)
     echeance = models.DateField(default=date.today)
+    dateLivraison = models.DateField(default=date.today)
     cheminFichier = models.CharField(max_length=255)
 
 class Evenement(models.Model):
