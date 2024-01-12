@@ -171,11 +171,12 @@ class MessageFeedSerializer(serializers.ModelSerializer):
             commentaire_list = []
             for commentaire in all_commentaire :
                 commentaire_list.append(CommentaireDetailSerializer(commentaire, many = False).data)
-                
+            commentaire_list.reverse()
+
             representation['commentaire'] = commentaire_list
         except :
             pass
-        
+
         return representation
 
 

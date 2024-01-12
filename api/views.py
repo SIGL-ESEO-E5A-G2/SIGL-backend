@@ -155,7 +155,7 @@ class MessageFeedViewSet(ReadOnlyModelViewSet):
     serializer_class = MessageFeedSerializer
 
     def get_queryset(self):
-        return Message.objects.all()
+        return reversed(Message.objects.all())
 
 class DepotViewSet(ModelViewSet):
     serializer_class = DepotSerializer
@@ -225,7 +225,7 @@ class MessageUtilisateurViewSet(ModelViewSet):
         try :
             utilisateur = self.request.query_params.get('utilisateur')
             print(self.request.query_params)
-            return Message.objects.filter(destinataire = utilisateur)
+            return Message.objects.filter(destinataire = utilisateur).reverse()
         except Exception as error :
             print(error)
             raise serializers.ValidationError({'utilisateur': 'Veuillez indiquer un utilisateur'})
@@ -237,7 +237,7 @@ class MessageUtilisateurFeedViewSet(ModelViewSet):
         try :
             utilisateur = self.request.query_params.get('utilisateur')
             print(self.request.query_params)
-            return Message.objects.filter(destinataire = utilisateur)
+            return Message.objects.filter(destinataire = utilisateur).reverse()
         except Exception as error :
             print(error)
             raise serializers.ValidationError({'utilisateur': 'Veuillez indiquer un utilisateur'})
