@@ -34,4 +34,12 @@
           "libelle": "MaitreAlternance"
         }
     }
+    ,
+    {
+        "model": "api.role",
+        "pk": 6,
+        "fields": {
+          "libelle": "ResponsableEntreprise"
+        }
+    }
 ]
