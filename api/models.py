@@ -176,6 +176,7 @@ class Message(models.Model):
     time = models.TimeField(default = datetime.now())
     createur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, related_name='createur_message')
     destinataire = models.ManyToManyField(Utilisateur)
+    visibilite = models.BooleanField(default=True)
     tags = models.ManyToManyField(Tag)
 
 class Depot(models.Model):
