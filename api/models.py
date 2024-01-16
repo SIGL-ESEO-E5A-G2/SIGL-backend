@@ -88,10 +88,7 @@ class Entreprise(models.Model):
 
 class ResponsableEntreprise(models.Model):
    id = models.AutoField(primary_key=True)
-   nom = models.CharField(max_length=255)
-   prenom = models.CharField(max_length=255)
-   telephone = models.CharField(max_length=255)
-   email = models.CharField(max_length=255)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
    fonction = models.CharField(max_length=255)
    ancienEseo = models.BooleanField(default=False)
    entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE)
@@ -199,7 +196,7 @@ class EntretienSemestriel(models.Model):
    evenement = models.ForeignKey(Evenement, on_delete=models.CASCADE)
    tuteurPedagogique = models.ForeignKey(TuteurPedagogique, blank=True, null=True, on_delete= models.SET_NULL)
    maitreAlternance = models.ForeignKey(MaitreAlternance, blank=True, null=True, on_delete= models.SET_NULL)
-   noteSemestre = models.IntegerField(default=-1)
+   noteSemestre = models.IntegerField(default=10)
    
 class Commentaire(models.Model):
    id = models.AutoField(primary_key=True)

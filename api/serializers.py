@@ -74,6 +74,7 @@ class EntrepriseSerializer(serializers.ModelSerializer):
         fields = '__all__'
 class ResponsableEntrepriseDetailSerializer(serializers.ModelSerializer):
     entreprise = EntrepriseSerializer(many=False)
+    utilisateur = UtilisateurSerializer(many=False)
     class Meta:
         model = ResponsableEntreprise
         fields = '__all__'

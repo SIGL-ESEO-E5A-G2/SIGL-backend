@@ -130,6 +130,42 @@
           "roles":[3],
           "telephone": "0102030405"
         }
+    },
+    {
+      "model": "api.utilisateur",
+      "pk": 12,
+          "fields": {
+              "nom" : "Responsable",
+              "prenom": "Smitt",
+              "telephone" : "0102030405",
+              "email" : "responsable@smitt.fr",
+              "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
+              "roles":[6]
+          }
+    },
+    {
+      "model": "api.utilisateur",
+      "pk": 13,
+          "fields": {
+              "nom" : "Responsable",
+              "prenom": "Lorillard",
+              "telephone" : "0102030405",
+              "email" : "responsable@lorillard.fr",
+              "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
+              "roles":[6]
+          }
+    },
+    {
+      "model": "api.utilisateur",
+      "pk": 14,
+          "fields": {
+              "nom" : "Responsable",
+              "prenom": "Thales",
+              "telephone" : "0102030405",
+              "email" : "responsable@thales.fr",
+              "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
+              "roles":[6]
+          }
     }
     
 ]
