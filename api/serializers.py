@@ -92,11 +92,37 @@ class TuteurPedagogiqueDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = TuteurPedagogique
         fields = '__all__'
+        
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        try :
+            all_apprenti = Apprenti.objects.filter(tuteurPedagogique=instance)
+            apprenti_list = []
+            for apprenti in all_apprenti :
+                apprenti_list.append(ApprentiSerializer(apprenti, many = False).data)
+                
+            representation['apprentis'] = apprenti_list
+        except :
+            pass
+        return representation
 
 class TuteurPedagogiqueSerializer(serializers.ModelSerializer):
     class Meta:
         model = TuteurPedagogique
         fields = '__all__'
+        
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        try :
+            all_apprenti = Apprenti.objects.filter(tuteurPedagogique=instance)
+            apprenti_list = []
+            for apprenti in all_apprenti :
+                apprenti_list.append(ApprentiSerializer(apprenti, many = False).data)
+                
+            representation['apprentis'] = apprenti_list
+        except :
+            pass
+        return representation
         
 class ProfesseurDetailSerializer(serializers.ModelSerializer):
     utilisateur = UtilisateurSerializer(many=False)
@@ -131,11 +157,29 @@ class MaitreAlternanceDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = MaitreAlternance
         fields = '__all__'
+        
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        try :
+            apprenti = Apprenti.objects.get(maitreAlternance=instance)
+            representation['apprenti_id'] = apprenti.id
+        except :
+            pass
+        return representation
 
 class MaitreAlternanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = MaitreAlternance
         fields = '__all__'
+    
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        try :
+            apprenti = Apprenti.objects.get(maitreAlternance=instance)
+            representation['apprenti_id'] = apprenti.id
+        except :
+            pass
+        return representation
 
 #--- CoordinatriceAlternance ---
 
