@@ -23,6 +23,9 @@ class RoleEnum(models.TextChoices):
    Administrateur = 'Administrateur', 'Administrateur'
    CoordinatriceAlternance = 'CoordinatriceAlternance', 'CoordinatriceAlternance'
    MaitreAlternance = 'MaitreAlternance', 'MaitreAlternance'
+   ResponsableEntreprise = 'ResponsableEntreprise', 'ResponsableEntreprise'
+   Professeur = 'Professeur', 'Professeur'
+   MembreExterieur = 'MembreExterieur', 'MembreExterieur'
 
 class Role(models.Model):
    id = models.AutoField(primary_key=True)
@@ -64,6 +67,14 @@ class Administrateur(models.Model):
    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 
 class TuteurPedagogique(models.Model):
+   id = models.AutoField(primary_key=True)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   
+class Professeur(models.Model):
+   id = models.AutoField(primary_key=True)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+
+class MembreExterieur(models.Model):
    id = models.AutoField(primary_key=True)
    utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
 

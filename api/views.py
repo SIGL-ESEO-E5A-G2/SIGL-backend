@@ -90,11 +90,32 @@ class TuteurPedagogiqueViewSet(ModelViewSet):
         return TuteurPedagogique.objects.all()
 
 
+class ProfesseurDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = ProfesseurDetailSerializer
+    def get_queryset(self):
+        return Professeur.objects.all()
+
+class ProfesseurViewSet(ModelViewSet):
+    serializer_class = ProfesseurSerializer
+    def get_queryset(self):
+        return Professeur.objects.all()
+    
+class MembreExterieurDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = MembreExterieurDetailSerializer
+    def get_queryset(self):
+        return MembreExterieur.objects.all()
+
+class MembreExterieurViewSet(ModelViewSet):
+    serializer_class = MembreExterieurSerializer
+    def get_queryset(self):
+        return MembreExterieur.objects.all()
+
+
 class TuteurPedagogiqueDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = TuteurPedagogiqueDetailSerializer
     def get_queryset(self):
         return TuteurPedagogique.objects.all()
-
+    
 #--- MaitreAlternance ---
 class MaitreAlternanceDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = MaitreAlternanceDetailSerializer

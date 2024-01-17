@@ -97,6 +97,30 @@ class TuteurPedagogiqueSerializer(serializers.ModelSerializer):
     class Meta:
         model = TuteurPedagogique
         fields = '__all__'
+        
+class ProfesseurDetailSerializer(serializers.ModelSerializer):
+    utilisateur = UtilisateurSerializer(many=False)
+    class Meta:
+        model = Professeur
+        fields = '__all__'
+
+class ProfesseurSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Professeur
+        fields = '__all__'
+        
+class MembreExterieurDetailSerializer(serializers.ModelSerializer):
+    utilisateur = UtilisateurSerializer(many=False)
+    class Meta:
+        model = MembreExterieur
+        fields = '__all__'
+
+class MembreExterieurSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MembreExterieur
+        fields = '__all__'
+
+
 
 #--- MaitreAlternance ---
 

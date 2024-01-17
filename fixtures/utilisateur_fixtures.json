@@ -166,6 +166,30 @@
               "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
               "roles":[6]
           }
+    },
+    {
+      "model": "api.utilisateur",
+      "pk": 15,
+          "fields": {
+              "nom" : "CHHEL",
+              "prenom": "Fabien",
+              "telephone" : "0102030405",
+              "email" : "fchhel@eseo.fr",
+              "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
+              "roles":[7]
+          }
+    },
+    {
+      "model": "api.utilisateur",
+      "pk": 16,
+          "fields": {
+              "nom" : "EXTERNE",
+              "prenom": "Membre",
+              "telephone" : "0102030405",
+              "email" : "mexterne@gmail.com",
+              "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
+              "roles":[8]
+          }
     }
     
 ]

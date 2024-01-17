@@ -42,4 +42,19 @@
           "libelle": "ResponsableEntreprise"
         }
     }
+    ,
+    {
+        "model": "api.role",
+        "pk": 7,
+        "fields": {
+          "libelle": "Professeur"
+        }
+    },
+    {
+        "model": "api.role",
+        "pk": 8,
+        "fields": {
+          "libelle": "MembreExterieur"
+        }
+    }
 ]

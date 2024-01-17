@@ -1,0 +1,9 @@
+[
+    {
+        "model": "api.MembreExterieur",
+        "fields": {
+          "utilisateur_id": 16
+        }
+    }
+]
+    
