@@ -3,56 +3,57 @@
     "model": "api.Tag",
         "fields": {
           "libelle": "Synthèse S5",
-          "type" : "Livrable"
+          "type" : "Livrable",
+          "couleur":"#0077b6"
         }
   },{
     "model": "api.Tag",
         "fields": {
           "libelle": "Synthèse S6",
-          "type" : "Livrable"
+          "type" : "Livrable",
+          "couleur":"#7209b7"
         }
   },{
     "model": "api.Tag",
         "fields": {
           "libelle": "Synthèse S7",
-          "type" : "Livrable"
+          "type" : "Livrable",
+          "couleur":"#ef233c"
         }
   },{
     "model": "api.Tag",
         "fields": {
           "libelle": "Synthèse S8",
-          "type" : "Livrable"
+          "type" : "Livrable",
+          "couleur":"#f18701"
         }
   },{
     "model": "api.Tag",
         "fields": {
           "libelle": "Synthèse S9",
-          "type" : "Livrable"
+          "type" : "Livrable",
+          "couleur":"#ffd166"
         }
   },{
     "model": "api.Tag",
         "fields": {
           "libelle": "Synthèse S10",
-          "type" : "Livrable"
+          "type" : "Livrable",
+          "couleur":"#99d98c"
         }
   },{
     "model": "api.Tag",
         "fields": {
           "libelle": "Notes de période",
-          "type" : "Note"
+          "type" : "Note",
+          "couleur":"#8A6544"
         }
   },{
     "model": "api.Tag",
         "fields": {
           "libelle": "Info",
-          "type" : "Autre"
-        }
-  },
-  {
-    "model": "api.Tag",
-        "fields": {
-          "libelle": "Déposé",
-          "type" : "Autre"
+          "type" : "Autre",
+          "couleur":"#ABB7CC"
         }
   }
 ]

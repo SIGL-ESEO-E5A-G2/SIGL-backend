@@ -162,7 +162,7 @@ class TypeTagEnum(models.TextChoices):
 class Tag(models.Model):
     id = models.AutoField(primary_key=True)
     libelle = models.CharField(max_length=255, default="N/A")
-    couleur = models.CharField(max_length=255, default="000000")
+    couleur = models.CharField(max_length=255, default="#000000")
     type = models.CharField(max_length=10, choices=TypeTagEnum.choices, default=TypeTagEnum.AUTRE)
 
 class Message(models.Model):
@@ -174,7 +174,7 @@ class Message(models.Model):
     createur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE, related_name='createur_message')
     destinataire = models.ManyToManyField(Utilisateur)
     visibilite = models.BooleanField(default=True)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, blank=True, null=True,)
 
 class Depot(models.Model):
     id = models.AutoField(primary_key=True)
