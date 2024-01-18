@@ -239,6 +239,28 @@ class ApprentiUtilisateurViewSet(ReadOnlyModelViewSet):
             print(error)
             raise serializers.ValidationError({'utilisateur': 'Veuillez indiquer un utilisateur'})
         
+class MaitreAlternanceUtilisateurViewSet(ReadOnlyModelViewSet):
+    serializer_class = MaitreAlternanceDetailSerializer
+    def get_queryset(self):
+        try :
+            utilisateur = self.request.query_params.get('utilisateur')
+            print(self.request.query_params)
+            return MaitreAlternance.objects.filter(utilisateur = utilisateur)
+        except Exception as error :
+            print(error)
+            raise serializers.ValidationError({'utilisateur': 'Veuillez indiquer un utilisateur'})
+        
+class TuteurPedagogiqueUtilisateurViewSet(ReadOnlyModelViewSet):
+    serializer_class = TuteurPedagogiqueDetailSerializer
+    def get_queryset(self):
+        try :
+            utilisateur = self.request.query_params.get('utilisateur')
+            print(self.request.query_params)
+            return TuteurPedagogique.objects.filter(utilisateur = utilisateur)
+        except Exception as error :
+            print(error)
+            raise serializers.ValidationError({'utilisateur': 'Veuillez indiquer un utilisateur'})
+        
 class MessageUtilisateurViewSet(ModelViewSet):
     serializer_class = MessageSerializer
 
