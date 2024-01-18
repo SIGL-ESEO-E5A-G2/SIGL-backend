@@ -161,8 +161,12 @@ class MaitreAlternanceDetailSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         try :
-            apprenti = Apprenti.objects.get(maitreAlternance=instance)
-            representation['apprenti_id'] = apprenti.id
+            all_apprenti = Apprenti.objects.filter(maitreAlternance=instance)
+            apprenti_list = []
+            for apprenti in all_apprenti :
+                apprenti_list.append(ApprentiSerializer(apprenti, many = False).data)
+                
+            representation['apprentis'] = apprenti_list
         except :
             pass
         return representation
@@ -175,8 +179,12 @@ class MaitreAlternanceSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         try :
-            apprenti = Apprenti.objects.get(maitreAlternance=instance)
-            representation['apprenti_id'] = apprenti.id
+            all_apprenti = Apprenti.objects.filter(maitreAlternance=instance)
+            apprenti_list = []
+            for apprenti in all_apprenti :
+                apprenti_list.append(ApprentiSerializer(apprenti, many = False).data)
+                
+            representation['apprentis'] = apprenti_list
         except :
             pass
         return representation
