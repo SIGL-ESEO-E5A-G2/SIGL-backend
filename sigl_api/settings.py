@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-from sigl_api import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,7 +29,7 @@ ALLOWED_HOSTS = ['10.0.0.21',
                  'localhost',
                  '10.0.0.20',
                  '20.216.183.45',
-                 'sigl.francecentral.cloudapp.azure.com'
+                 'myapprenticeshipeseo.francecentral.cloudapp.azure.com'
 ]
 
 
@@ -180,11 +179,11 @@ CSP_IMG_SRC = ["'self'"]
 CSP_FRAME_SRC = ["https://docs.google.com"]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://sigl.francecentral.cloudapp.azure.com",
+    "https://myapprenticeshipeseo.francecentral.cloudapp.azure.com",
     "http://localhost:5173"
 ]
 CSRF_TRUSTED_ORIGINS = [
-        'https://sigl.francecentral.cloudapp.azure.com',
+        'https://myapprenticeshipeseo.francecentral.cloudapp.azure.com',
         'http://localhost:5173'
 ]
 
