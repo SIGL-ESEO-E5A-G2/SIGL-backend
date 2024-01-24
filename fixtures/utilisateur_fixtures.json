@@ -190,6 +190,31 @@
               "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
               "roles":[8]
           }
+    },
+    {
+      "model": "api.utilisateur",
+      "pk": 17,
+          "fields": {
+              "nom" : "FINANCE",
+              "prenom": "resp",
+              "telephone" : "0102030405",
+              "email" : "respfinance@gmail.com",
+              "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
+              "roles":[9]
+          }
+    }
+    ,
+    {
+      "model": "api.utilisateur",
+      "pk": 18,
+          "fields": {
+              "nom" : "ADMINISTRATION",
+              "prenom": "resp",
+              "telephone" : "0102030405",
+              "email" : "respadministration@gmail.com",
+              "password": "pbkdf2_sha256$600000$pfCCe8yF6RqV2D5oQF0FQO$nuojqhVdVMpjDKhLvf0j74lNfJUqTorcaOyPGmXTTPU=",
+              "roles":[10]
+          }
     }
     
 ]

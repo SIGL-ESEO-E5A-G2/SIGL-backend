@@ -26,6 +26,8 @@ class RoleEnum(models.TextChoices):
    ResponsableEntreprise = 'ResponsableEntreprise', 'ResponsableEntreprise'
    Professeur = 'Professeur', 'Professeur'
    MembreExterieur = 'MembreExterieur', 'MembreExterieur'
+   ResponsableFinance = 'ResponsableFinance', 'ResponsableFinance'
+   ResponsableAdministration = 'ResponsableAdministration', 'ResponsableAdministration'
 
 class Role(models.Model):
    id = models.AutoField(primary_key=True)
@@ -103,6 +105,16 @@ class ResponsableEntreprise(models.Model):
    fonction = models.CharField(max_length=255)
    ancienEseo = models.BooleanField(default=False)
    entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE)
+   
+class ResponsableFinance(models.Model):
+   id = models.AutoField(primary_key=True)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   ancienEseo = models.BooleanField(default=False)
+   
+class ResponsableAdministration(models.Model):
+   id = models.AutoField(primary_key=True)
+   utilisateur = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+   ancienEseo = models.BooleanField(default=False)
 
 class Opco(models.Model):
    id = models.AutoField(primary_key=True)
@@ -164,6 +176,8 @@ class Apprenti(models.Model):
    entreprise = models.ForeignKey(Entreprise, blank=True, null=True, on_delete= models.SET_NULL)
    opco = models.ForeignKey(Opco, blank=True, null=True, on_delete= models.SET_NULL)
    grilleEvaluation = models.ForeignKey(GrilleEvaluation, blank=True, null=True, on_delete= models.SET_NULL)
+   ResponsableFinance = models.ForeignKey(ResponsableFinance, blank=True, null=True, on_delete= models.SET_NULL)
+   ResponsableAdministration = models.ForeignKey(ResponsableAdministration, blank=True, null=True, on_delete= models.SET_NULL)
 
 class TypeTagEnum(models.TextChoices):
     LIVRABLE = 'Livrable', 'Livrable'

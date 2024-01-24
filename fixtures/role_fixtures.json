@@ -56,5 +56,19 @@
         "fields": {
           "libelle": "MembreExterieur"
         }
+    },
+    {
+        "model": "api.role",
+        "pk": 9,
+        "fields": {
+          "libelle": "ResponsableFinance"
+        }
+    },
+    {
+        "model": "api.role",
+        "pk": 10,
+        "fields": {
+          "libelle": "ResponsableAdministration"
+        }
     }
 ]

@@ -1,0 +1,9 @@
+[
+  {
+    "model": "api.ResponsableAdministration",
+        "fields": {
+            "utilisateur_id" : 18,
+            "ancienEseo":false
+        }
+  }
+]

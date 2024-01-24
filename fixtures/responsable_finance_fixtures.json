@@ -1,0 +1,9 @@
+[
+  {
+    "model": "api.ResponsableFinance",
+        "fields": {
+            "utilisateur_id" : 17,
+            "ancienEseo":false
+        }
+  }
+]

@@ -71,7 +71,7 @@ class AuthentificationUtilisateurView(ObtainAuthToken):
             response = Response({'jwt_token': jwt_token, 'access_token': str(token[0]), 'id': utilisateur.id}, status=status.HTTP_200_OK)
 
             # Autoriser les connexions depuis le domaine de l'application front-end
-            response["Content-Security-Policy"] = "default-src 'self' https://sigl.francecentral.cloudapp.azure.com"
+            response["Content-Security-Policy"] = "default-src 'self' https://myapprenticeshipeseo.francecentral.cloudapp.azure.com"
 
             return response
         else:
@@ -215,6 +215,26 @@ class ResponsableEntrepriseDetailViewSet(ReadOnlyModelViewSet):
     serializer_class = ResponsableEntrepriseDetailSerializer
     def get_queryset(self):
         return ResponsableEntreprise.objects.all()
+    
+class ResponsableFinanceViewSet(ModelViewSet):
+    serializer_class = ResponsableFinanceSerializer
+    def get_queryset(self):
+        return ResponsableFinance.objects.all()
+
+class ResponsableFinanceDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = ResponsableFinanceDetailSerializer
+    def get_queryset(self):
+        return ResponsableFinance.objects.all()
+    
+class ResponsableAdministrationViewSet(ModelViewSet):
+    serializer_class = ResponsableAdministrationSerializer
+    def get_queryset(self):
+        return ResponsableAdministration.objects.all()
+
+class ResponsableAdministrationDetailViewSet(ReadOnlyModelViewSet):
+    serializer_class = ResponsableAdministrationDetailSerializer
+    def get_queryset(self):
+        return ResponsableAdministration.objects.all()
 
 class ApprentiPromotionViewSet(ModelViewSet):
     serializer_class = ApprentiDetailSerializer

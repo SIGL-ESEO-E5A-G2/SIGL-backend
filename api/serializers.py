@@ -83,6 +83,28 @@ class ResponsableEntrepriseSerializer(serializers.ModelSerializer):
     class Meta:
         model = ResponsableEntreprise
         fields = '__all__'
+        
+class ResponsableFinanceDetailSerializer(serializers.ModelSerializer):
+    utilisateur = UtilisateurSerializer(many=False)
+    class Meta:
+        model = ResponsableFinance
+        fields = '__all__'
+
+class ResponsableFinanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ResponsableFinance
+        fields = '__all__'
+        
+class ResponsableAdministrationDetailSerializer(serializers.ModelSerializer):
+    utilisateur = UtilisateurSerializer(many=False)
+    class Meta:
+        model = ResponsableAdministration
+        fields = '__all__'
+
+class ResponsableAdministrationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ResponsableAdministration
+        fields = '__all__'
 
 
 #--- TuteurPedagogique ---
@@ -213,6 +235,8 @@ class ApprentiDetailSerializer(serializers.ModelSerializer):
     entreprise = EntrepriseSerializer(many=False)
     opco = EntrepriseSerializer(many=False)
     promotion = PromotionSerializer(many=False)
+    ResponsableFinance = ResponsableFinanceDetailSerializer(many=False)
+    ResponsableAdministration = ResponsableAdministrationDetailSerializer(many=False)
     class Meta:
         model = Apprenti
         fields = '__all__'

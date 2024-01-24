@@ -9,6 +9,8 @@ python ../manage.py loaddata utilisateur_fixtures.json \
                              coordinatriceAlternance_fixtures.json \
                              maitreAlternance_fixtures.json \
                              grilleDevaluation_fixtures.json \
+                             responsable_finance_fixtures.json \
+                             responsable_administration_fixtures.json \
                              apprenti_fixtures.json \
                              tag_fixtures.json \
                              message_fixtures.json \
@@ -19,4 +21,5 @@ python ../manage.py loaddata utilisateur_fixtures.json \
                              competenceApprenti_fixtures.json \
                              commentaire_fixtures.json \
                              professeur_fixtures.json \
-                             membreExterieur_fixtures.json
+                             membreExterieur_fixtures.json \
+                             
