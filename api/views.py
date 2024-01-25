@@ -369,7 +369,7 @@ def get_pdf_from_azure(request):
         if blob_client.exists():
             # Récupérer le contenu du fichier PDF
             blob_data = blob_client.download_blob()
-            pdf_content = blob_data.read()
+            pdf_content = blob_data.readall()
 
             # Configurer la réponse HTTP pour le fichier PDF
             response = HttpResponse(pdf_content, content_type='application/pdf')
