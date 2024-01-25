@@ -344,7 +344,6 @@ def upload_pdf_to_azure(request):
 
 # views.py
 import json
-import base64
 from urllib.parse import unquote  # Import unquote
 @csrf_exempt
 def get_pdf_from_azure(request):
@@ -371,13 +370,10 @@ def get_pdf_from_azure(request):
             # Récupérer le contenu du fichier PDF
             blob_data = blob_client.download_blob()
             pdf_content = blob_data.readall()
-            
-            pdf_content_base64 = base64.b64encode(pdf_content).decode('utf-8')
 
             # Configurer la réponse HTTP pour le fichier PDF
-            response = HttpResponse(pdf_content_base64, content_type='application/pdf')
+            response = HttpResponse(pdf_content, content_type='application/pdf')
             response['Content-Disposition'] = f'inline; filename="{file_path}"'
-            
             return response
         else:
             # Retourner une réponse 404 si le fichier n'existe pas
